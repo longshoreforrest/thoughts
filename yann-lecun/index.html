@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="myself">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Is Yann LeCun an LLM and Transformer skeptic? Dated, sourced quotes from 2022–2026 compared with the state of AI in November 2026.">
+<meta name="theme-color" content="#3b5bdb">
+<link rel="canonical" href="https://longshoreforrest.github.io/thoughts/yann-lecun/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Is Yann LeCun an LLM and Transformer skeptic?">
+<meta property="og:description" content="Is Yann LeCun an LLM and Transformer skeptic? Dated, sourced quotes from 2022–2026 compared with the state of AI in November 2026.">
+<meta property="og:url" content="https://longshoreforrest.github.io/thoughts/yann-lecun/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧠%3C/text%3E%3C/svg%3E">
+<title>Is Yann LeCun an LLM and Transformer skeptic? A sourced look (Nov 2026)</title>
+<style>
+:root,[data-theme=light]{--bg:#f6f7fb;--card:#ffffff;--card2:#eef1fa;--tx:#1a1f36;--mut:#5b6486;--acc:#3b5bdb;--onacc:#fff;--acc2:#c25e00;--ok:#1b8a5a;--warn:#a56a00;--bad:#c13a3a;--line:#dfe3f0;--glow:rgba(124,156,255,.20);--bq:#26305c;--ctl:rgba(246,247,251,.93);--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--shadow:0 1px 3px rgba(30,40,90,.08)}
+[data-theme=dark]{--bg:#0f1220;--card:#181c30;--card2:#1f2440;--tx:#e9ecf8;--mut:#9aa3c7;--acc:#7c9cff;--onacc:#0b1030;--acc2:#ffb86b;--ok:#5fd39b;--warn:#ffcf5c;--bad:#ff7b7b;--line:#2b3157;--glow:rgba(40,60,160,.45);--bq:#dfe4ff;--ctl:rgba(15,18,32,.92);--shadow:none}
+[data-theme=paper]{--bg:#f3ead8;--card:#fbf5e6;--card2:#efe3c8;--tx:#2b2118;--mut:#7a6a55;--acc:#8c2f1b;--onacc:#fff;--acc2:#a05a00;--ok:#3d7a3a;--warn:#8a6100;--bad:#a3281c;--line:#d9c9a6;--glow:rgba(190,130,60,.14);--bq:#4a3524;--ctl:rgba(243,234,216,.93);--font:Georgia,"Times New Roman",serif;--shadow:0 1px 2px rgba(80,50,20,.10)}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,var(--glow) 0,transparent 60%),var(--bg);color:var(--tx);font:16px/1.55 var(--font)}
+.wrap{max-width:1020px;margin:0 auto;padding:60px 20px 80px}
+.sitebar{position:fixed;top:0;left:0;right:0;height:46px;z-index:40;background:var(--ctl);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 20px;font-size:.85rem;font-weight:600;color:var(--mut);letter-spacing:.02em}
+.item{scroll-margin-top:120px}
+@media(max-width:520px){.sitebar span.t{display:none}}
+.topbar{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;margin-bottom:18px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.seg button{background:transparent;color:var(--tx);border:0;padding:6px 14px;font-size:.88rem;cursor:pointer;font-family:inherit}
+.seg button.on{background:var(--acc);color:var(--onacc);font-weight:600}
+.seg button.flag{font-size:1.05rem;padding:5px 12px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;border:1px solid var(--line);vertical-align:middle}
+h1{font-size:2.1rem;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--mut);margin:0 0 18px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--line);margin-bottom:20px}
+.tabs button{background:transparent;color:var(--mut);border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 16px;font-size:.98rem;cursor:pointer;font-family:inherit;font-weight:600}
+.tabs button.on{color:var(--acc);border-bottom-color:var(--acc)}
+.tabs button:hover{color:var(--tx)}
+.tab{display:none}.tab.on{display:block}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow)}
+.controls{position:sticky;top:46px;z-index:5;background:var(--ctl);backdrop-filter:blur(8px);padding:12px 0 10px;margin-bottom:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+.row label{color:var(--mut);font-size:.82rem;margin-right:4px}
+button.chip{background:var(--card2);color:var(--tx);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.85rem;cursor:pointer;font-family:inherit}
+button.chip:hover{border-color:var(--acc)}
+button.chip.on{background:var(--acc);color:var(--onacc);border-color:var(--acc);font-weight:600}
+input[type=date],input[type=search]{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:.9rem;font-family:inherit}
+input[type=search]{min-width:220px}
+.count{margin-left:auto;color:var(--mut);font-size:.85rem}
+.timeline{position:relative;margin-top:14px;padding-left:26px}
+.timeline:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.item{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:0 0 16px;box-shadow:var(--shadow)}
+.timeline .item:before{content:"";position:absolute;left:-24px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px var(--bg)}
+.date{color:var(--acc2);font-weight:700;font-size:.9rem;letter-spacing:.02em}
+.ev{color:var(--mut);font-size:.88rem}
+.gist{font-weight:600;margin:6px 0 8px}
+blockquote{margin:6px 0;padding:6px 0 6px 14px;border-left:3px solid var(--acc);color:var(--bq);font-style:italic}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 6px}
+.tag{font-size:.74rem;background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:1px 8px;color:var(--mut)}
+.src{font-size:.88rem;margin-top:6px}
+a{color:var(--acc)}
+.badge{font-size:.72rem;border-radius:6px;padding:1px 7px;margin-left:6px;border:1px solid;white-space:nowrap}
+.b1{color:var(--ok);border-color:var(--ok)}
+.b2{color:var(--warn);border-color:var(--warn)}
+.b3{color:var(--bad);border-color:var(--bad)}
+.note{color:var(--mut);font-size:.88rem}
+.ctx{border-style:dashed;background:transparent;box-shadow:none}
+.timeline .ctx:before{background:var(--mut)}
+h2{font-size:1.25rem;margin:30px 0 10px}
+h3{font-size:1.02rem;margin:0 0 6px}
+ul.plain{margin:6px 0 0 18px;padding:0}
+footer{margin-top:40px;color:var(--mut);font-size:.82rem}
+.empty{display:none;text-align:center;color:var(--mut);padding:30px}
+.authnote{border-left:5px solid var(--acc);background:var(--card)}
+.qa li{margin:8px 0}
+.lightrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0;padding:8px 10px;background:var(--card2);border-radius:10px}
+.lightrow .lh{font-size:.78rem;color:var(--mut);font-weight:600;margin-right:4px}
+.lightrow button.v{cursor:pointer;font-family:inherit}
+.lightrow button.v:hover{filter:brightness(.93);transform:translateY(-1px)}
+.modal-bg{position:fixed;inset:0;background:rgba(10,14,30,.55);display:flex;align-items:flex-start;justify-content:center;padding:60px 16px 4vh;z-index:50;overflow:auto}
+.modal-bg[hidden]{display:none}
+.modal{background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:16px;max-width:860px;width:100%;padding:20px 22px 8px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.modal h3{font-size:1.15rem;margin:0 36px 2px 0}
+.modal .msub{color:var(--mut);font-size:.88rem;margin-bottom:10px}
+.mclose{position:absolute;top:12px;right:14px;background:var(--card2);border:1px solid var(--line);color:var(--tx);border-radius:999px;width:32px;height:32px;cursor:pointer;font-size:1rem;line-height:1}
+body.noscroll{overflow:hidden}
+details.fold>summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;gap:8px;font-weight:700}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::before{content:"▸";display:inline-block;flex:none;width:1em;color:var(--acc);transition:transform .15s}
+details.fold[open]>summary::before{transform:rotate(90deg)}
+details.fold>summary:hover{color:var(--acc)}
+details.fold>summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+details.fold.inl{margin-top:8px}
+details.fold.inl>summary{font-weight:600;font-size:.9rem;color:var(--acc)}
+details.fold.inl[open]>summary{margin-bottom:6px}
+details.panel.fold{padding:14px 18px}
+details.panel.fold>summary{font-size:1.02rem}
+details.panel.fold[open]>summary{margin-bottom:10px}
+details.scard>summary h3{margin:0}
+details.scard[open]>summary{margin-bottom:8px}
+.sl{display:block}
+.teaser{display:block;color:var(--mut);font-weight:400;font-size:.88rem;margin-top:2px}
+details.fold[open]>summary .teaser{display:none}
+li.morefold{list-style:none;margin-left:-18px}
+.foldbar{display:flex;gap:8px;margin:0 0 12px}
+.topright{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+a.authorpill{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:.88rem;color:var(--tx);background:var(--card);border:1px solid var(--acc);border-radius:999px;padding:6px 14px;text-decoration:none;box-shadow:var(--shadow);white-space:nowrap}
+a.authorpill:hover,a.authorpill:focus-visible{background:var(--acc);color:var(--onacc)}
+#thoughts-author{display:none!important}
+
+/* ===== MySelf theme (adapted from longshoreforrest.github.io/myself) ===== */
+[data-theme=myself]{--bg:#f7f7f4;--card:#ffffff;--card2:#eef1ee;--tx:#171c1b;--mut:#5c6663;--acc:#0e7a6d;--onacc:#ffffff;--acc2:#155e9c;--ok:#0e7a6d;--warn:#9a6700;--bad:#b42318;--line:rgba(23,28,27,.1);--glow:transparent;--bq:#171c1b;--ctl:rgba(247,247,244,.9);--font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--shadow:0 1px 0 rgba(23,28,27,.02)}
+@media (prefers-color-scheme:dark){
+ [data-theme=myself]{--bg:#101413;--card:#181e1c;--card2:#1f2624;--tx:#e8ecea;--mut:#9aa5a1;--acc:#3ec9b4;--onacc:#101413;--acc2:#6fb4ec;--ok:#5fd39b;--warn:#f0c36b;--bad:#ff8f8f;--line:rgba(232,236,234,.12);--bq:#e8ecea;--ctl:rgba(16,20,19,.9);--shadow:0 24px 60px -28px rgba(0,0,0,.7)}
+ [data-theme=myself] .v-wrong{color:#ff8f8f}[data-theme=myself] .v-pess{color:#ffb35c}[data-theme=myself] .v-part{color:#f0d34a}[data-theme=myself] .v-right{color:#6fe0ae}[data-theme=myself] .v-open{color:#a3b0ff}
+}
+.orbs{display:none}
+[data-theme=myself] .orbs{display:block;position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+[data-theme=myself] .orbs::before,[data-theme=myself] .orbs::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.16}
+[data-theme=myself] .orbs::before{width:560px;height:560px;background:var(--acc);top:-180px;right:-120px}
+[data-theme=myself] .orbs::after{width:480px;height:480px;background:var(--acc2);bottom:-200px;left:-160px}
+html{scroll-behavior:smooth}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:var(--card);max-width:100%;flex-wrap:wrap;margin:6px 0 4px}
+.kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 20%,transparent)}
+h1 em{font-style:normal}
+[data-theme=myself] h1{font-size:clamp(2.2rem,5.4vw,3.6rem);line-height:1.06;letter-spacing:-.035em;font-weight:800;margin:14px 0 14px}
+[data-theme=myself] h1 em{background:linear-gradient(100deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-theme=myself] .sub{font-size:clamp(1.02rem,1.6vw,1.2rem);max-width:42em;line-height:1.55}
+[data-theme=myself] .sitebar span.t{text-transform:uppercase;letter-spacing:.14em;font-weight:700;color:var(--tx);font-size:.8rem}
+[data-theme=myself] .panel,[data-theme=myself] .item,[data-theme=myself] .scard,[data-theme=myself] details.panel{border-radius:20px}
+[data-theme=myself] .item,[data-theme=myself] .scard{transition:transform .15s ease,border-color .15s ease}
+[data-theme=myself] .item:hover,[data-theme=myself] details.scard:hover{transform:translateY(-2px)}
+[data-theme=myself] .timeline .item:hover{transform:none}
+[data-theme=myself] .authnote{border-left:1px solid var(--line);border-top:3px solid var(--acc)}
+[data-theme=myself] .seg button.on,[data-theme=myself] button.chip.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+[data-theme=myself] button.chip:hover{border-color:var(--acc)}
+[data-theme=myself] a.authorpill{border-color:var(--line);background:var(--card)}
+[data-theme=myself] a.authorpill:hover,[data-theme=myself] a.authorpill:focus-visible{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+[data-theme=myself] .tabs button{letter-spacing:-.005em}
+[data-theme=myself] h2{display:flex;align-items:baseline;gap:14px;font-weight:800;letter-spacing:-.03em;font-size:clamp(1.4rem,3vw,1.9rem)}
+[data-theme=myself] h2::after{content:"";flex:1;height:1px;background:var(--line)}
+[data-theme=myself] .date{color:var(--acc);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+[data-theme=myself] .timeline .item:before{left:-27px;top:20px;width:14px;height:14px;background:var(--bg);border:3px solid var(--acc);box-shadow:none}
+[data-theme=myself] blockquote{border-left:3px solid var(--acc);font-style:normal;font-weight:500}
+[data-theme=myself] .gist{letter-spacing:-.01em}
+[data-theme=myself] .metric .val{color:var(--acc)}
+[data-theme=myself] .stat b i{color:var(--acc)}
+/* stats strip (all themes) */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;margin:6px 0 22px}
+.stat b{display:block;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.03em;font-weight:800;line-height:1.15}
+.stat b i{font-style:normal;color:var(--acc)}
+.stat span{font-size:.85rem;color:var(--mut)}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+.anlink{color:inherit;text-decoration:underline;text-decoration-color:var(--acc);text-decoration-thickness:2px;text-underline-offset:3px}
+.anlink:hover,.anlink:focus-visible{color:var(--acc)}
+/* verdicts */
+.v{display:inline-block;font-size:.78rem;font-weight:700;border-radius:999px;padding:2px 11px;border:1px solid;letter-spacing:.01em}
+.v-wrong{color:#c13a3a;border-color:#c13a3a;background:rgba(214,69,69,.12)}
+.v-pess{color:#b86a00;border-color:#d98a1e;background:rgba(224,138,30,.14)}
+.v-part{color:#8a7400;border-color:#c9a400;background:rgba(201,164,0,.14)}
+.v-right{color:#1b8a5a;border-color:#2f9e6b;background:rgba(47,158,107,.13)}
+.v-open{color:#4d5dc0;border-color:#6b7bd6;background:rgba(107,123,214,.13)}
+[data-theme=dark] .v-wrong{color:#ff8f8f}[data-theme=dark] .v-pess{color:#ffb35c}[data-theme=dark] .v-part{color:#f0d34a}[data-theme=dark] .v-right{color:#6fe0ae}[data-theme=dark] .v-open{color:#a3b0ff}
+.claim{border-left:5px solid var(--line)}
+.claim.c-wrong{border-left-color:#d64545}.claim.c-pess{border-left-color:#e08a1e}.claim.c-part{border-left-color:#c9a400}.claim.c-right{border-left-color:#2f9e6b}.claim.c-open{border-left-color:#6b7bd6}
+.claim .head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
+.claim .strength{color:var(--mut);font-size:.8rem;margin-left:auto}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+.col{background:var(--card2);border-radius:10px;padding:10px 12px;font-size:.93rem}
+.col h4{margin:0 0 4px;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}
+.links{font-size:.84rem;margin-top:6px}
+.links a{margin-right:10px}
+/* summary */
+.bar{display:flex;height:34px;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin:10px 0 8px}
+.bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.9rem}
+.bar .s-wrong{background:#d64545}.bar .s-pess{background:#e08a1e}.bar .s-part{background:#c9a400}.bar .s-right{background:#2f9e6b}.bar .s-open{background:#6b7bd6}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:.85rem;color:var(--mut)}
+.legend span.k{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+table.t{width:100%;border-collapse:collapse;font-size:.92rem}
+@media(max-width:640px){table.t{display:block;overflow-x:auto;max-width:100%}table.t th,table.t td{min-width:130px}}
+table.t th,table.t td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{color:var(--mut);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.big{font-size:1.15rem;line-height:1.5}
+.tl li{margin:6px 0}
+a.jump{cursor:pointer}
+/* state */
+.scard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.scard h3{font-size:1.1rem}
+.scard .headline{font-weight:600;margin-bottom:8px}
+.metric{display:grid;grid-template-columns:minmax(150px,1fr) minmax(110px,.55fr) 2fr;gap:10px;padding:8px 0;border-top:1px solid var(--line);align-items:start}
+.metric .lab{font-weight:600;font-size:.92rem}
+.metric .val{color:var(--acc2);font-weight:800;font-size:1.02rem}
+.metric .nt{font-size:.88rem;color:var(--tx)}
+@media(max-width:760px){.metric{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="orbs" aria-hidden="true"></div>
+<div class="wrap">
+
+<div class="sitebar"><span class="t">Yann LeCun &amp; LLMs · Nov 2026</span></div>
+<noscript><div class="panel"><strong>This page needs JavaScript for the interactive tabs.</strong> Short answer: Yann LeCun is a consistent, qualified LLM skeptic since at least 2022 — he doubts that scaling language models or training on text alone leads to human-level intelligence, while calling LLMs useful. There is no evidence he is a Transformer skeptic: his objections target the objective (next-token prediction) and data (text only), and his own JEPA models build on Vision Transformers. Many of his specific claims about what LLMs cannot do (reasoning, planning) have not held up by November 2026; claims about missing persistent memory and weak physical understanding have held up better; his central bet — world models replacing LLMs — is still open.</div></noscript>
+<div class="topbar">
+  <div class="seg" id="langSeg" role="group" aria-label="Language">
+    <button class="flag" data-lang="fi" title="Suomi">🇫🇮 FI</button>
+    <button class="flag" data-lang="en" title="English">🇬🇧 EN</button>
+  </div>
+  <div class="topright"><div class="seg" id="themeSeg" role="group" aria-label="Style">
+    <button data-th="myself"><span class="sw" style="background:linear-gradient(135deg,#0e7a6d,#155e9c)"></span><span data-i18n="th_myself"></span></button>
+    <button data-th="light"><span class="sw" style="background:#fff"></span><span data-i18n="th_light"></span></button>
+    <button data-th="dark"><span class="sw" style="background:#181c30"></span><span data-i18n="th_dark"></span></button>
+    <button data-th="paper"><span class="sw" style="background:#efe3c8"></span><span data-i18n="th_paper"></span></button>
+  </div>
+    <a class="authorpill" href="https://longshoreforrest.github.io/myself/" rel="author" target="_blank" title="https://longshoreforrest.github.io/myself/"><span aria-hidden="true">✍️</span><span data-i18n="author_lbl"></span></a></div>
+</div>
+
+<span class="kicker" data-i18n="kicker"></span>
+<h1 data-i18n-html="h1"></h1>
+<p class="sub" data-i18n="sub"></p>
+<div class="panel authnote" data-i18n-html="authnote"></div>
+
+<div class="tabs" id="tabs">
+  <button data-tab="summary" data-i18n="tab_summary"></button>
+  <button data-tab="claims" data-i18n="tab_claims"></button>
+  <button data-tab="state" data-i18n="tab_state"></button>
+  <button data-tab="quotes" data-i18n="tab_quotes"></button>
+</div>
+
+<!-- ============ SUMMARY ============ -->
+<div class="tab" id="tab-summary">
+  <div class="panel big" id="sumLead"></div>
+  <div class="stats" id="stats"></div>
+  <div class="panel" data-i18n-html="tr"></div>
+  <div class="panel">
+    <h3 data-i18n="s_score_h"></h3>
+    <div class="bar" id="bar"></div>
+    <div class="legend" id="legend"></div>
+    <p class="note" data-i18n-html="s_score_note"></p>
+  </div>
+  <div class="grid2">
+    <div class="panel"><h3 data-i18n="s_wrong_h"></h3><ul class="plain tl" id="listWrong"></ul></div>
+    <div class="panel"><h3 data-i18n="s_right_h"></h3><ul class="plain tl" id="listRight"></ul></div>
+  </div>
+  <details class="panel fold" data-k="sum-topic" open>
+    <summary data-i18n="s_topic_h"></summary>
+    <table class="t" id="topicTable"></table>
+  </details>
+  <details class="panel fold" data-k="sum-open" open>
+    <summary data-i18n="s_open_h"></summary>
+    <table class="t" id="openTable"></table>
+  </details>
+  <details class="panel fold" data-k="sum-def">
+    <summary data-i18n="s_def_h"></summary>
+    <div data-i18n-html="s_def"></div>
+  </details>
+  <details class="panel fold note" data-k="sum-method">
+    <summary data-i18n="s_method_h"></summary>
+    <div data-i18n-html="s_method"></div>
+  </details>
+</div>
+
+<!-- ============ CLAIMS ============ -->
+<div class="tab" id="tab-claims">
+  <div class="panel" data-i18n-html="c_intro"></div>
+  <div class="controls">
+    <div class="row"><label data-i18n="c_verdict"></label><span id="cVerd"></span></div>
+    <div class="row"><label data-i18n="c_topic"></label><span id="cTopic"></span><span class="count" id="cCount"></span></div>
+    <div class="row"><button class="chip" data-fold="claimList" data-act="open" data-i18n="fold_open"></button><button class="chip" data-fold="claimList" data-act="close" data-i18n="fold_close"></button></div>
+  </div>
+  <div id="claimList"></div>
+</div>
+
+<!-- ============ STATE ============ -->
+<div class="tab" id="tab-state">
+  <div class="panel" id="stLead"></div>
+  <div class="foldbar"><button class="chip" data-fold="stateList" data-act="open" data-i18n="fold_open"></button><button class="chip" data-fold="stateList" data-act="close" data-i18n="fold_close"></button></div>
+  <div id="stateList"></div>
+</div>
+
+<!-- ============ QUOTES ============ -->
+<div class="tab" id="tab-quotes">
+  <div class="panel" data-i18n-html="summary"></div>
+  <div class="controls">
+    <div class="row"><label data-i18n="year"></label><span id="years"></span>
+      <label style="margin-left:12px" data-i18n="range"></label>
+      <input type="date" id="from" min="2022-01-01" max="2026-12-31"> –
+      <input type="date" id="to" min="2022-01-01" max="2026-12-31">
+      <span class="count" id="count"></span></div>
+    <div class="row"><label data-i18n="topic"></label><span id="tagbar"></span></div>
+    <div class="row"><label data-i18n="light_f"></label><span id="qVerd"></span></div>
+    <div class="row"><label data-i18n="search"></label><input type="search" id="q">
+      <button class="chip" id="reset" data-i18n="reset"></button>
+      <button class="chip" id="sort"></button>
+      <button class="chip" data-fold="list" data-act="open" data-i18n="fold_open"></button><button class="chip" data-fold="list" data-act="close" data-i18n="fold_close"></button></div>
+  </div>
+  <div class="timeline" id="list"></div>
+  <div class="empty" id="empty" data-i18n="empty"></div>
+
+  <h2 data-i18n="h_ctx"></h2>
+  <div class="item ctx">
+    <div class="date" id="ctxDate"></div>
+    <div class="gist" data-i18n="ctx_gist"></div>
+    <div class="note"><span data-i18n="ctx_body"></span><br>
+    <a href="https://builtin.com/articles/ami-labs-yann-lecun" target="_blank" rel="noopener">Built In</a> ·
+    <a href="https://www.startuphub.ai/ai-news/ai-figures/2026/figure-yann-lecun-llm-position-evolution-2026-06-16" target="_blank" rel="noopener">StartupHub.ai</a></div>
+  </div>
+
+  <details class="panel fold note" data-k="unv" style="margin-top:24px">
+    <summary data-i18n="h_unv"></summary>
+    <div data-i18n-html="unv"></div>
+  </details>
+  <footer data-i18n-html="foot"></footer>
+</div>
+
+</div>
+
+<div class="modal-bg" id="modalBg" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><button class="mclose" id="mClose" type="button">✕</button><h3 id="mTitle"></h3><div class="msub" id="mSub"></div><div class="note" id="mNote" style="margin-bottom:12px"></div><div id="mBody"></div></div></div>
+
+<script>
+const T=(fi,en)=>({fi,en});
+const I18N={
+fi:{
+ h1:"Onko Yann LeCun <em>LLM- ja Transformer-skeptikko</em>?",
+ sub:"Päivätty ja lähteistetty katsaus siihen, mitä hän on sanonut vuodesta 2022 — ja miten se kestää tekoälyn nykytilan marraskuussa 2026",
+ authnote:"<strong><a class=\"anlink\" href=\"https://longshoreforrest.github.io/myself/\" target=\"_blank\" rel=\"author noopener\" title=\"https://longshoreforrest.github.io/myself/\">Kirjoittajan huomautus.</a></strong> Arvostan Yann LeCunia ja hänen työtään syvästi. Hänen 1980- ja 1990-lukujen aikaansaannoksensa — konvoluutioneuroverkot, varhainen versio backpropagation-algoritmista ja ensimmäinen konvoluutioverkon opettaminen käsinkirjoitettujen numeroiden kuviin — ovat nykyisen syväoppimisen perustuksia, ja hän jakoi vuoden 2018 Turing-palkinnon Geoffrey Hintonin ja Yoshua Bengion kanssa (<a href=\"https://www.acm.org/media-center/2019/march/turing-award-2018\" target=\"_blank\" rel=\"noopener\">ACM</a>). <details class=\"fold inl\" data-k=\"an\"><summary>Lue lisää</summary>Se, onko kielimalli oikea tie ihmistason tekoälyyn, on aito tieteellinen kysymys, ja LeCun on usein se, joka esittää alalle vaikeat kysymykset. Tämä sivu ei yritä vähätellä hänen saavutuksiaan. Se asettaa hänen päivätyt julkiset LLM-lausuntonsa rinnakkain julkisesti raportoitujen tulosten kanssa marraskuussa 2026 — ennusteiden tarkistamista, mikä on vaikeaa kaikille. En ole sidoksissa LeCuniin, Metaan tai AMI Labsiin.</details>",
+ tr:"<strong>Entä Transformerit?</strong> En löytänyt LeCunin lausuntoa, joka hyökkäisi itse Transformer-arkkitehtuuria vastaan. Kommentaattorit sijoittavat hänen kritiikkinsä yleensä <em>koulutustavoitteeseen ja dataan</em> (seuraavan tokenin ennustus, pelkkä tekstioppiminen, maailmamallin puute) eikä arkkitehtuuriin (toissijaista kommentaaria, ei LeCunin omia sanoja). <details class=\"fold inl\" data-k=\"tr\"><summary>Näyttö ja lähteet</summary>Hänen oma JEPA-linjansa nojaa myös Transformereihin: V-JEPA 2 ja 2.1 käyttävät toissijaisten lähteiden mukaan Vision Transformer -enkoodereita ja -ennustajia (<a href=\"https://arxiv.org/pdf/2603.14482\" target=\"_blank\" rel=\"noopener\">V-JEPA 2.1 arXiv</a>, <a href=\"https://learnopencv.com/v-jepa-2-meta-world-model-robotics-guide/\" target=\"_blank\" rel=\"noopener\">Learn OpenCV -opas</a>). <em>Näytön taso: kohtalainen — en lukenut alkuperäisiä artikkeleita enkä löytänyt LeCunilta suoraa sitaattia Transformereista.</em></details>",
+ light_h:"Väite marraskuun 2026 valossa",light_f:"Marraskuun 2026 valossa",m_note:"Kirjoittajan arvio väitteestä julkista näyttöä vasten 19.11.2026 — ei objektiivinen tuomio.",m_goto:"Avaa väitteet-välilehdellä",m_close:"Sulje",
+ c_details:"Tarkemmat tiedot: nykytila, varaukset, näyttö",fold_open:"Avaa kaikki",fold_close:"Sulje kaikki",more_q:n=>`+${n} lisää sitaattia`,show_n:n=>`Näytä ${n} lisää`,s_method_h:"Menetelmä ja rajoitukset",
+ author_lbl:"Kirjoittaja: Tapio Pitkäranta",
+ th_myself:"MySelf",kicker:"Lähteistetty analyysi · päivitetty 19.11.2026",stat_claims:"arvioitua väitettä",stat_sources:"päivättyä lähdettä",stat_quotes:"sitaattia",stat_bets:"avointa vetoa",
+ th_light:"Vaalea",th_dark:"Tumma",th_paper:"Paperi",
+ tab_summary:"Lyhyt vastaus",tab_claims:"Ovatko väitteet kestäneet?",tab_state:"Missä tekoäly on nyt?",tab_quotes:"Mitä hän sanoi ja milloin?",
+ summary:"<strong>Aikajana.</strong> Kesäkuusta 2022 alkaen LeCun on toistuvasti sanonut, ettei usko LLM:ien skaalaamiseen \"not for one second\", ja linja on pysynyt: hänen mukaansa LLM:t eivät ymmärrä fyysistä maailmaa, niillä ei ole pysyvää muistia, ne eivät päättele tai suunnittele riittävästi, eikä pelkkä teksti riitä ihmistason älyyn. Hän ei kuitenkaan väitä LLM:iä hyödyttömiksi — \"small role\", \"orchestrator\" — vaan sanoo, ettei niistä tule ihmistason tekoälyn ydintä. Marraskuussa 2025 hän lähti Metalta perustamaan <em>AMI Labsin</em> maailmamallien ympärille.",
+ year:"Vuosi",range:"Aikaväli",topic:"Aihe",search:"Haku",all:"Kaikki",
+ ph:"esim. cat, scaling, text…",reset:"Tyhjennä suodattimet",newest:"Uusin ensin",oldest:"Vanhin ensin",
+ count:(r,q)=>`${r} lähdettä · ${q} sitaattia`,
+ empty:"Ei sitaatteja valituilla suodattimilla.",
+ src:"Lähde",b1:"artikkeli",b2:"toissijainen",
+ h_ctx:"Tausta: LeCunin oma siirto",ctx_date:"19.11.2025 – 2026",
+ ctx_gist:"LeCun jättää Metan ja perustaa AMI Labsin",
+ ctx_body:"Lähteiden mukaan hän ilmoitti lähdöstä 19.11.2025 ja AMI Labs (Pariisi, maailmamallit) keräsi maaliskuussa 2026 raportoidusti noin 1,03 mrd dollaria. Kyse on toissijaisista uutislähteistä, joita ei ole varmistettu yhtiön omasta tiedotteesta.",
+ h_unv:"Löytyi mutta ei varmennettu sanatarkasti",
+ unv:"Näitä kuulee usein, mutta en saanut sanatarkkaa sitaattia alkuperäislähteestä, joten ne on jätetty pois listasta:<ul class=\"plain\"><li>\"Pure Auto-Regressive LLMs are a dead end on the way towards human-level AI\" — väitetysti X-päivitys syyskuulta 2024. Löytyi vain blogeista, ei LeCunin omalta tililtä.</li><li>\"Machine Learning sucks\" — väitetysti maaliskuun 2023 debattidiat. Ei löytynyt vahvistusta (<a href=\"https://wp.nyu.edu/consciousness/?p=1072\" target=\"_blank\" rel=\"noopener\">NYU-debatin ilmoitus 24.3.2023</a>).</li><li>\"Auto-regressive LLMs are doomed\" 2023 — ilmaus on vahvistettu vasta syyskuun 2025 diasta (ks. yllä).</li><li>WSJ 11.–14.10.2024: <em>\"This AI Pioneer Thinks AI Is Dumber Than a Cat\"</em> on otsikko, ei sitaatti (<a href=\"https://www.goodreads.com/author_blog_posts/25175268-this-ai-pioneer-thinks-ai-is-dumber-than-a-cat?tab=book\" target=\"_blank\" rel=\"noopener\">referaatti</a>). Kissa-vertaus \"smarter than a house cat\" on toissijaisten lähteiden mukaan X-viestistä, ei varmennettu.</li><li>Davos 2026 \"LLMs are an off-ramp\" ja \"No amount of scaling…\" — vain aggregaattisivuilla.</li></ul>",
+ foot:"Menetelmä: verkkohaku + sivujen luku. Sitaatit on poimittu artikkelien tekstistä automaattisesti (tiivistävä työkalu), joten tarkka sanamuoto kannattaa tarkistaa linkin takaa ennen julkaisua. Sitaatit ovat alkuperäiskielellä (englanti). Merkintä <span class=\"badge b1\">artikkeli</span> = sitaatti luettu julkaisun omasta tekstistä; <span class=\"badge b2\">toissijainen</span> = sitaatti lainattu uutisesta tai referaatista tai päivämäärä on epäsuora. Jotkin sivut (Observer, Newsweek, ThePrint) estivät suoran luvun, joten niiden sisältö on toisen käden. <br><br><strong>Vastuuvapaus.</strong> Lyhyet sitaatit ovat julkisista lähteistä, lähteineen linkitettyinä kommentointia varten. Luvut muuttuvat nopeasti ja moni on valmistajan oma — tarkista linkeistä. Sivu päivitetty 19.11.2026; korjaukset tervetulleita. Kirjoittaja: <a href=\"https://longshoreforrest.github.io/myself/\" target=\"_blank\" rel=\"author noopener\">Tapio Pitkäranta</a>. Sivu käyttää perustason käyttöanalytiikkaa (sivunäytöt ja vuorovaikutukset, kuten välilehti- ja kielivalinnat).",
+ /* summary */
+ s_score_h:"Tulostaulu: {N} väitettä",
+ s_score_note:"Luokittelu on <em>kirjoittajan arvio</em> julkisesta näytöstä, ei objektiivinen tuomio. <strong>Kumottu</strong> = näyttö kumoaa väitteen selvästi · <strong>Liian pessimistinen</strong> = suunta tai osa oikein, mutta rajat/aikataulu liian ahtaita · <strong>Osin oikeassa</strong> · <strong>Oikeassa toistaiseksi</strong> · <strong>Auki</strong> = ei vielä ratkaistavissa.",
+ s_wrong_h:"Missä väitteet eivät ole kestäneet (toistaiseksi)",
+ s_right_h:"Missä väitteet ovat kestäneet",
+ s_topic_h:"Aihe kerrallaan",s_open_h:"Avoimet vedot — milloin ne ratkeavat",s_def_h:"LeCunin puolustus: mitä tämä vertailu ei ratkaise",
+ th_topic:"Aihe",th_verd:"Kokonaisarvio",th_why:"Perustelu",th_when:"Milloin",th_bet:"Veto",th_status:"Tilanne nyt",
+ c_intro:"Jokainen väite on yhdistetty sitaattiin ja verrattu nykytilaan (välilehti <em>Missä tekoäly on nyt?</em>). <strong>Näytön vahvuus</strong>: ●●● = ensisijaista dataa, useita riippumattomia lähteitä · ●●○ = hyvä mutta osin toissijainen · ●○○ = heikko, vain yksi tai epäsuora lähde.",
+ c_verdict:"Arvio",c_topic:"Aihe",c_count:n=>`${n} väitettä`,
+ c_quote:"Väite",c_now:"Nykytila",c_caveat:"Varaukset",c_strength:"Näytön vahvuus",c_src:"Sitaatin lähde",c_ev:"Näyttö",
+ st_lead:"<strong>Tilannekuva 19.11.2026.</strong> Luvut on kerätty verkosta marraskuussa 2026: ARC Prize, Artificial Analysis, METR, Stanford AI Index, DeepMind sekä aggregaattisivut. Luotettavuus on merkitty jokaiselle riville: <span class=\"badge b1\">ensisijainen</span> sivu luettu suoraan · <span class=\"badge b2\">toissijainen</span> blogi/aggregaatti/uutinen · <span class=\"badge b3\">epävarma</span> toimittajan oma tai ristiriitainen väite. Benchmark ≠ yleinen älykkyys: tulokset ovat harness-, tehtävä- ja arviointiriippuvaisia.",
+ conf1:"ensisijainen",conf2:"toissijainen",conf3:"epävarma",
+ /* verdicts */
+},
+en:{
+ h1:"Is Yann LeCun an <em>LLM and Transformer skeptic</em>?",
+ sub:"A dated, sourced look at what he has said since 2022 — and how it holds up against the state of AI in November 2026",
+ authnote:"<strong><a class=\"anlink\" href=\"https://longshoreforrest.github.io/myself/\" target=\"_blank\" rel=\"author noopener\" title=\"https://longshoreforrest.github.io/myself/\">Author's note.</a></strong> I have great respect for Yann LeCun and his work. His 1980s and 1990s contributions — convolutional neural networks, an early version of backpropagation, and being the first to train a convolutional network on images of handwritten digits — are among the foundations of modern deep learning, and he shared the 2018 Turing Award with Geoffrey Hinton and Yoshua Bengio (<a href=\"https://www.acm.org/media-center/2019/march/turing-award-2018\" target=\"_blank\" rel=\"noopener\">ACM</a>). <details class=\"fold inl\" data-k=\"an\"><summary>Read more</summary>Whether language models are the right path to human-level AI is a genuine scientific question, and LeCun is often the one asking the hard questions the field needs. This page does not try to diminish his achievements. It simply lines up his dated public statements about LLMs against publicly reported results as of November 2026 — an exercise in checking predictions, which is hard for everyone. I am not affiliated with LeCun, Meta or AMI Labs.</details>",
+ tr:"<strong>What about Transformers?</strong> I found no statement by LeCun attacking the Transformer architecture itself. Commentators generally place his critique in the <em>training objective and data</em> (next-token prediction, text-only learning, no world model) rather than the architecture (secondary commentary, not LeCun's own words). <details class=\"fold inl\" data-k=\"tr\"><summary>Evidence and sources</summary>His own JEPA line also builds on Transformers: V-JEPA 2 and 2.1 use Vision Transformer encoders and predictors according to secondary sources (<a href=\"https://arxiv.org/pdf/2603.14482\" target=\"_blank\" rel=\"noopener\">V-JEPA 2.1 on arXiv</a>, <a href=\"https://learnopencv.com/v-jepa-2-meta-world-model-robotics-guide/\" target=\"_blank\" rel=\"noopener\">Learn OpenCV guide</a>). <em>Evidence level: moderate — I did not read the original papers and could not find an explicit LeCun quote on Transformers.</em></details>",
+ light_h:"This claim in the light of November 2026",light_f:"In light of Nov 2026",m_note:"The author's assessment of the claim against public evidence as of 19 Nov 2026 — not an objective verdict.",m_goto:"Open in the claims tab",m_close:"Close",
+ c_details:"Details: current state, caveats, evidence",fold_open:"Expand all",fold_close:"Collapse all",more_q:n=>`+${n} more quotes`,show_n:n=>`Show ${n} more`,s_method_h:"Method and limitations",
+ author_lbl:"Author: Tapio Pitkäranta",
+ th_myself:"MySelf",kicker:"Sourced analysis · updated 19 Nov 2026",stat_claims:"claims assessed",stat_sources:"dated sources",stat_quotes:"quotes",stat_bets:"open bets",
+ th_light:"Light",th_dark:"Dark",th_paper:"Paper",
+ tab_summary:"Short answer",tab_claims:"How have the claims held up?",tab_state:"Where is AI now?",tab_quotes:"What did he say, and when?",
+ summary:"<strong>Timeline.</strong> From June 2022 on, LeCun has repeatedly said he doesn't believe in simply scaling up LLMs \"not for one second\", and the line has held: in his view LLMs don't understand the physical world, lack persistent memory, can't reason or plan well enough, and text alone isn't enough for human-level intelligence. He doesn't call LLMs useless — \"small role\", \"orchestrator\" — but says they won't be the core of human-level AI. In November 2025 he left Meta to found <em>AMI Labs</em>, built around world models.",
+ year:"Year",range:"Date range",topic:"Topic",search:"Search",all:"All",
+ ph:"e.g. cat, scaling, text…",reset:"Clear filters",newest:"Newest first",oldest:"Oldest first",
+ count:(r,q)=>`${r} sources · ${q} quotes`,
+ empty:"No quotes match the selected filters.",
+ src:"Source",b1:"article",b2:"secondary",
+ h_ctx:"Context: LeCun's own move",ctx_date:"19 Nov 2025 – 2026",
+ ctx_gist:"LeCun leaves Meta and founds AMI Labs",
+ ctx_body:"According to the sources he announced his departure on 19 Nov 2025, and AMI Labs (Paris, world models) reportedly raised about $1.03B in March 2026. These are secondary news sources, not checked against the company's own announcement.",
+ h_unv:"Found but not verified word for word",
+ unv:"These are often repeated, but I couldn't get a verbatim quote from a primary source, so they are left out of the list:<ul class=\"plain\"><li>\"Pure Auto-Regressive LLMs are a dead end on the way towards human-level AI\" — allegedly an X post from September 2024. Found only on blogs, not on LeCun's own account.</li><li>\"Machine Learning sucks\" — allegedly a slide from a March 2023 debate. No confirmation found (<a href=\"https://wp.nyu.edu/consciousness/?p=1072\" target=\"_blank\" rel=\"noopener\">NYU debate announcement, 24 Mar 2023</a>).</li><li>\"Auto-regressive LLMs are doomed\" in 2023 — the phrase is only verified from a September 2025 slide (see above).</li><li>WSJ, 11–14 Oct 2024: <em>\"This AI Pioneer Thinks AI Is Dumber Than a Cat\"</em> is a headline, not a quote (<a href=\"https://www.goodreads.com/author_blog_posts/25175268-this-ai-pioneer-thinks-ai-is-dumber-than-a-cat?tab=book\" target=\"_blank\" rel=\"noopener\">summary</a>). The \"smarter than a house cat\" line is, per secondary sources, from an X post — unverified.</li><li>Davos 2026 \"LLMs are an off-ramp\" and \"No amount of scaling…\" — only on aggregator sites.</li></ul>",
+ foot:"Method: web search + reading the pages. Quotes were extracted from the article text automatically (a summarising tool), so check the exact wording at the link before republishing. Quotes are in the original language (English). <span class=\"badge b1\">article</span> = quote read from the publication's own text; <span class=\"badge b2\">secondary</span> = quoted via a news item or summary, or the date is indirect. Some pages (Observer, Newsweek, ThePrint) blocked direct reading, so their content is second-hand. <br><br><strong>Disclaimer.</strong> Short quotes are from public sources, attributed and linked, for commentary. Figures change fast and many are vendors' own — check the links. Last updated 19 Nov 2026; corrections welcome. Author: <a href=\"https://longshoreforrest.github.io/myself/\" target=\"_blank\" rel=\"author noopener\">Tapio Pitkäranta</a>. This page uses basic usage analytics (page views and interactions such as tab and language choices).",
+ s_score_h:"Scoreboard: {N} claims",
+ s_score_note:"The classification is <em>the author's judgement</em> of public evidence, not an objective verdict. <strong>Contradicted</strong> = evidence clearly refutes the claim · <strong>Too pessimistic</strong> = direction or part is right, but limits/timeline too narrow · <strong>Partly right</strong> · <strong>Right so far</strong> · <strong>Open</strong> = can't be settled yet.",
+ s_wrong_h:"Where the claims have not held up (so far)",
+ s_right_h:"Where the claims have held up",
+ s_topic_h:"Topic by topic",s_open_h:"Open bets — when they resolve",s_def_h:"LeCun's defence: what this comparison doesn't settle",
+ th_topic:"Topic",th_verd:"Overall",th_why:"Why",th_when:"When",th_bet:"Bet",th_status:"Status now",
+ c_intro:"Each claim is linked to a quote and compared with the current state (tab <em>Where is AI now?</em>). <strong>Strength of evidence</strong>: ●●● = primary data, several independent sources · ●●○ = good but partly secondary · ●○○ = weak, a single or indirect source.",
+ c_verdict:"Verdict",c_topic:"Topic",c_count:n=>`${n} claims`,
+ c_quote:"Claim",c_now:"Current state",c_caveat:"Caveats",c_strength:"Evidence strength",c_src:"Quote source",c_ev:"Evidence",
+ st_lead:"<strong>Snapshot 19 Nov 2026.</strong> Figures were gathered from the web in November 2026: ARC Prize, Artificial Analysis, METR, Stanford AI Index, DeepMind and aggregator sites. Reliability is marked on every row: <span class=\"badge b1\">primary</span> page read directly · <span class=\"badge b2\">secondary</span> blog/aggregator/news · <span class=\"badge b3\">uncertain</span> vendor's own or conflicting claim. Benchmark ≠ general intelligence: results depend on harness, task set and grading.",
+ conf1:"primary",conf2:"secondary",conf3:"uncertain"
+}};
+
+const VERD={
+ wrong:{fi:"Kumottu",en:"Contradicted",ord:1},
+ pess:{fi:"Liian pessimistinen",en:"Too pessimistic",ord:2},
+ part:{fi:"Osin oikeassa",en:"Partly right",ord:3},
+ right:{fi:"Oikeassa toistaiseksi",en:"Right so far",ord:4},
+ open:{fi:"Auki",en:"Open",ord:5}
+};
+const TOPICS={
+ reasoning:T("Päättely","Reasoning"),
+ planning:T("Suunnittelu & pitkät tehtävät","Planning & long tasks"),
+ memory:T("Muisti & jatkuva oppiminen","Memory & continual learning"),
+ physical:T("Fyysinen maailma","Physical world"),
+ scaling:T("Skaalaus & data","Scaling & data"),
+ factual:T("Faktuaalisuus & hallittavuus","Factuality & control"),
+ timeline:T("Aikataulut & paradigma","Timelines & paradigm"),
+ impact:T("Vaikutus & hype","Impact & hype")
+};
+const TAGS={"skaalaus":"scaling","teksti vs. maailma":"text vs. world","maailmamalli":"world model","hype & kilpailu":"hype & competition","maalaisjärki & kissa":"common sense & cat","aikataulu":"timeline","päättely & suunnittelu":"reasoning & planning","virheen kasautuminen":"error accumulation","neuvo opiskelijoille":"advice to students","hyödyllisyys":"usefulness","robotiikka":"robotics","turvallisuus":"safety"};
+
+/* ================= QUOTES ================= */
+const DATA = [
+{d:"2022-06-24",ev:"MIT Technology Review -haastattelu",evE:"MIT Technology Review interview",gist:"Ei usko pelkkään LLM:ien skaalaamiseen",gistE:"Doesn't believe in just scaling up LLMs",q:["This idea that we're going to just scale up the current large language models … I don't believe this at all, not for one second."],tags:["skaalaus"],url:"https://www.technologyreview.com/2022/06/24/1054817/yann-lecun-bold-new-vision-future-ai-deep-learning-meta/",src:"MIT Technology Review",v:1},
+{d:"2022-08-23",ev:"Noema-essee (kirjoittajat Jacob Browning & Yann LeCun)",evE:"Noema essay (authors Jacob Browning & Yann LeCun)",gist:"Pelkällä kielellä koulutettu järjestelmä ei yllä ihmisen älyyn",gistE:"A system trained on language alone won't reach human intelligence",q:["A system trained on language alone will never approximate human intelligence","There is no way to approximate this deep understanding solely through language; it's just the wrong kind of thing.","language doesn't exhaust intelligence"],tags:["teksti vs. maailma","maailmamalli"],url:"https://www.noemamag.com/ai-and-the-limits-of-language/",src:"Noema Magazine",v:1,n:"Yhteiskirjoitus, osuuksia ei eritelty.",nE:"Co-written essay; individual contributions aren't separated."},
+{d:"2023-01-23",ev:"Collective[i] Forecast -keskustelu (NYU:n ja ZDNetin referaatti)",evE:"Collective[i] Forecast discussion (via NYU and ZDNet)",gist:"ChatGPT ei ole tekniikaltaan mullistava",gistE:"ChatGPT isn't technically groundbreaking",q:["In terms of underlying techniques, ChatGPT is not particularly innovative","OpenAI is not particularly advanced compared to the other labs, at all"],tags:["hype & kilpailu"],url:"https://engineering.nyu.edu/news/chatgpt-not-particularly-innovative-and-nothing-revolutionary-says-metas-chief-ai-scientist",src:"NYU Engineering",v:1,n:"Koskee uutuusarvoa, ei suoraan LLM-rajoitteita.",nE:"About novelty, not directly about LLM limitations."},
+{d:"2023-01-24",ev:"Fortune + LeCunin X-täsmennys",evE:"Fortune + LeCun's clarification on X",gist:"\"Ei mullistavaa\" — julkinen mielikuva väärä",gistE:"\"Nothing revolutionary\" — the public perception is off",q:["It's nothing revolutionary, although that's the way it's perceived in the public","It's just that, you know, it's well put together, it's nicely done.","To be clear: I'm not criticizing OpenAI's work nor their claims"],tags:["hype & kilpailu"],url:"https://fortune.com/2023/01/24/meta-ai-chief-openai-chatgpt-google-microsoft-facebook/",src:"Fortune",v:1},
+{d:"2023-02-05",ev:"X-viesti (@ylecun)",evE:"X post (@ylecun)",gist:"Kotikissalla on enemmän maalaisjärkeä kuin yhdelläkään LLM:llä",gistE:"A house cat has more common sense than any LLM",q:["A house cat has way more common sense and understanding of the world than any LLM."],tags:["maalaisjärki & kissa","maailmamalli"],url:"https://twitter.com/ylecun/status/1622300311573651458",src:"X / Language Log",v:2,n:"Päivä ja teksti Language Login lainauksesta; X-sivua ei avattu.",nE:"Date and text from Language Log's citation; the X page itself wasn't opened."},
+{d:"2024-02-14",ev:"World Government Summit, Dubai (Cointelegraph)",evE:"World Government Summit, Dubai (Cointelegraph)",gist:"Ihmistason tekoäly ei ole nurkan takana",gistE:"Human-level AI is not around the corner",q:["Things that we completely take for granted turn out to be extremely complicated for computers to reproduce.","So AGI, or human-level AI, is not just around the corner, it's going to require some pretty deep perceptual changes."],tags:["aikataulu","maailmamalli"],url:"https://cointelegraph.com/news/meta-artificial-intelligence-ai-boss-says-llms-not-enough-human-level-ai-is-not-just-around-the-corner",src:"Cointelegraph",v:1},
+{d:"2024-02-15",ev:"Observer-haastattelu (Dubai-puhe), lainattu Language Logissa",evE:"Observer interview (Dubai talk), quoted in Language Log",gist:"Kissa muistaa, ymmärtää fysiikkaa ja suunnittelee — paremmin kuin suurimmat LLM:t",gistE:"A cat remembers, understands physics and plans — better than the biggest LLMs",q:["So maybe we are at the size of a cat. But why aren't those systems as smart as a cat?","A cat can remember, can understand the physical world, can plan complex actions, can do some level of reasoning"],tags:["maalaisjärki & kissa","päättely & suunnittelu"],url:"https://observer.com/2024/02/metas-a-i-chief-yann-lecun-explains-why-a-house-cat-is-smarter-than-the-best-a-i/",src:"Observer (via Language Log)",v:2,n:"Observer esti suoran luvun; sitaatit Language Login kautta: <a href='https://languagelog.ldc.upenn.edu/nll/?p=62581' target='_blank' rel='noopener'>Language Log</a>.",nE:"Observer blocked direct reading; quotes via Language Log: <a href='https://languagelog.ldc.upenn.edu/nll/?p=62581' target='_blank' rel='noopener'>Language Log</a>."},
+{d:"2024-03-07",ev:"Lex Fridman Podcast #416 (litteraatti)",evE:"Lex Fridman Podcast #416 (transcript)",gist:"LLM:t eivät muista, päättele eivätkä suunnittele — tekstiä on liian vähän",gistE:"LLMs can't remember, reason or plan — and text is too little",q:["They don't really have persistent memory. They can't really reason and they certainly can't plan.","most of what we learn and most of our knowledge is through our observation and interaction with the real world, not through language","the probability that an answer would be nonsensical increases exponentially with the number of tokens","They’re not going to be able to plan for situations where that they never encountered before.","That is not to say that autoregressive LLMs are not useful."],tags:["päättely & suunnittelu","teksti vs. maailma","virheen kasautuminen"],url:"https://lexfridman.com/yann-lecun-3-transcript",src:"Lex Fridman transcript",v:2,n:"Jakson päivämäärä 7.3.2024 on muistinvarainen, sivu ei sitä kertonut.",nE:"The episode date (7 Mar 2024) is from memory; the page didn't state it."},
+{d:"2024-05-22",ev:"VivaTech, Pariisi (VentureBeat) + FT-lainaus",evE:"VivaTech, Paris (VentureBeat) + FT quote",gist:"Älä tee LLM:iä — rakenna seuraavaa sukupolvea",gistE:"Don't work on LLMs — build the next generation",q:["You should work on next-gen AI systems that lift the limitations of LLMs.","This is in the hands of large companies, there's nothing you can bring to the table","I'm working on the next generation AI systems myself, not on LLMs.","do not understand the physical world, do not have persistent memory, cannot reason in any reasonable definition of the term (Financial Times, quoted in VentureBeat)"],tags:["neuvo opiskelijoille","päättely & suunnittelu","maailmamalli"],url:"https://venturebeat.com/ai/ai-pioneer-lecun-to-next-gen-ai-builders-dont-focus-on-llms",src:"VentureBeat",v:1},
+{d:"2024-12-23",ev:"Johns Hopkins Bloomberg Center -paneeli (The Decoder)",evE:"Johns Hopkins Bloomberg Center panel (The Decoder)",gist:"Pelkän tekstin skaalaus ei riitä — jopa Ilya on kääntynyt",gistE:"Scaling text alone isn't enough — even Ilya has changed his mind",q:["Ilya was famously a believer in that concept and now apparently not anymore"],tags:["skaalaus","teksti vs. maailma"],url:"https://the-decoder.com/?p=19964",src:"The Decoder",v:1,n:"Muut kohdat artikkelissa ovat toimittajan parafraaseja (data loppumassa, 4-vuotias on nähnyt enemmän dataa kuin LLM).",nE:"The rest of the article is the reporter's paraphrase (data running out; a 4-year-old has seen more data than an LLM)."},
+{d:"2025-01-23",ev:"Davos / WEF -paneeli (TechCrunch)",evE:"Davos / WEF panel (TechCrunch)",gist:"LLM-paradigman kantoaika on 3–5 vuotta",gistE:"The LLM paradigm's shelf life is 3–5 years",q:["I think the shelf life of the current [LLM] paradigm is fairly short, probably three to five years","nobody in their right mind would use them anymore, at least not as the central component","LLMs really are not capable of any of this","LLMs are good at manipulating language, but not at thinking"],tags:["aikataulu","päättely & suunnittelu","maailmamalli"],url:"https://techcrunch.com/2025/01/23/metas-yann-lecun-predicts-a-new-ai-architectures-paradigm-within-5-years-and-decade-of-robotics",src:"TechCrunch",v:1},
+{d:"2025-03-19",ev:"NVIDIA GTC 2025, keskustelu Bill Dallyn kanssa (HackerNoon-referaatti)",evE:"NVIDIA GTC 2025, conversation with Bill Dally (HackerNoon write-up)",gist:"\"En ole enää kiinnostunut LLM:istä\"",gistE:"\"I'm not so interested in LLMs anymore\"",q:["not so interested in LLMs anymore","simplistic way of viewing reasoning","writing a program without knowing how to write a program","completely hopeless (generating many token sequences and picking the best, beyond short sequences)","are never going to get to AGI... by just training from text"],tags:["päättely & suunnittelu","skaalaus","teksti vs. maailma"],url:"https://hackernoon.com/metas-ai-boss-just-called-llms-simplistic-heres-what-hes-building-instead",src:"HackerNoon (1 Aug 2025)",v:2,n:"Esiintymispäivä 19.3.2025 toissijaisen kiinalaisen raportin mukaan; HackerNoon kertoo vain 'äskettäinen GTC'. Katkelmat ovat artikkelin lainauksia, eivät täyttä litteraattia.",nE:"Event date 19 Mar 2025 per a secondary Chinese report; HackerNoon only says 'recent GTC'. Fragments are quotes from the article, not a full transcript."},
+{d:"2025-08-01",ev:"Newsweek-haastattelu (päivä epäsuora)",evE:"Newsweek interview (date indirect)",gist:"Älä tee LLM:iä; teksti ei riitä; LLM:llä pieni rooli",gistE:"Don't work on LLMs; text isn't enough; LLMs get a small role",q:["Don't work on LLMs.","we're never going to get to human-level intelligence by just training on text","There's a small role for LLMs, which is basically turning abstract thoughts into language.","that's clearly System 1—it's reactive, right? There's no reasoning"],tags:["neuvo opiskelijoille","teksti vs. maailma","päättely & suunnittelu"],url:"https://www.newsweek.com/nw-ai/ai-impact-interview-yann-lecun-artificial-intelligence-2054237",src:"Newsweek",v:2,n:"Artikkelissa ei näkynyt päivää; kuvapolku viittaa elokuuhun 2025, joten päivä on arvio.",nE:"No date shown in the article; the image path suggests August 2025, so the date is an estimate."},
+{d:"2025-09-10",ev:"NYU Center for Data Science -seminaari (PPC Land 25.9.2025)",evE:"NYU Center for Data Science seminar (PPC Land, 25 Sep 2025)",gist:"\"Auto-regressive LLMs are doomed\"",gistE:"\"Auto-regressive LLMs are doomed\"",q:["Auto-Regressive LLMs are doomed","They cannot be made factual, non-toxic, etc. They are not controllable,","P(correct) = (1-e)^n","A four year-old child has seen more data than an LLM,","IF YOU ARE INTERESTED IN HUMAN-LEVEL AI, DON'T WORK ON LLMs,"],tags:["virheen kasautuminen","neuvo opiskelijoille","teksti vs. maailma"],url:"https://ppc.land/lecun-calls-auto-regressive-llms-doomed-at-nyu-seminar/",src:"PPC Land",v:1,n:"Osa on dian tekstiä; kaava kuvaa virheen kasautumista pituuden n yli.",nE:"Partly slide text; the formula describes error accumulation over length n."},
+{d:"2026-01-22",ev:"MIT Technology Review -haastattelu (AMI Labs)",evE:"MIT Technology Review interview (AMI Labs)",gist:"LLM:t eivät ennusta tekojensa seurauksia",gistE:"LLMs can't predict the consequences of their actions",q:["LLMs manipulate language really well.","They can't truly reason or plan, because they lack a model of the world.","They can't predict the consequences of their actions.","The breakthroughs are not going to come from scaling up LLMs.","Don't work on LLMs. There is no point.","LLMs are now technology development, not research.","we are going to see LLMs as kind of the orchestrator in systems, a little bit."],tags:["skaalaus","päättely & suunnittelu","neuvo opiskelijoille","hyödyllisyys"],url:"https://www.technologyreview.com/2026/01/22/1131661/yann-lecuns-new-venture-ami-labs/",src:"MIT Technology Review",v:1,n:"Lainaukset tulivat tiivistävän työkalun kautta; tarkista sanamuoto lähteestä.",nE:"Quotes came through a summarising tool; check the wording at the source."},
+{d:"2026-01-23",ev:"AI House, Davos (Fortune)",evE:"AI House, Davos (Fortune)",gist:"Koko ala on \"LLM-pilled\"",gistE:"The whole industry is \"LLM-pilled\"",q:["The AI industry is completely LLM-pilled,","The reason … LLMs have been so successful is because language is easy,","We're never going to get to human-level intelligence by training LLMs or by training on text only."],tags:["skaalaus","teksti vs. maailma","hype & kilpailu"],url:"https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/",src:"Fortune",v:1},
+{d:"2026-04-01",ev:"Brown University, Lemley-luentosarja (Brown-uutinen)",evE:"Brown University, Lemley lecture series (Brown news)",gist:"LLM:t \"huijaavat meidät luulemaan että ne ovat älykkäitä\"",gistE:"LLMs \"fool us into thinking they are smart\"",q:["We have systems that can manipulate language, and they fool us into thinking they are smart","There's literally hundreds of billions invested in an industry that basically is counting on the fact that LLMs [are] going to reach human-level intelligence.","It's complete BS."],tags:["hype & kilpailu","hyödyllisyys"],url:"https://www.brown.edu/news/2026-04-01/yann-lecun-artificial-intelligence-pioneer",src:"Brown University",v:1,n:"Toinen lainaus on lyhennetty työkalun merkkirajan vuoksi.",nE:"The second quote was shortened by the extraction tool's character limit."},
+{d:"2026-05-18",ev:"Unsupervised Learning -podcast (Humanoids Daily 18.5.2026)",evE:"Unsupervised Learning podcast (Humanoids Daily, 18 May 2026)",gist:"VLA-mallit \"nähdään epäonnistumisena\"; paradigmamuutos selviää 2027 alussa",gistE:"VLA models \"seen as a failure\"; paradigm shift obvious by early 2027",q:["How is it that a 17-year-old can learn to drive in a dozen hours?","basically now being seen as a failure (about Vision-Language-Action models)","intrinsically unsafe (about LLM-based agents)","completely obvious to people by early 2027 (the needed paradigm shift)","dead end (scaling current methods for physical intelligence)"],tags:["robotiikka","turvallisuus","aikataulu","maailmamalli"],url:"https://www.humanoidsdaily.com/news/yann-lecun-predicts-paradigm-shift-in-robotics-by-2027-dismisses-llms-as-intrinsically-unsafe",src:"Humanoids Daily",v:2,n:"Vain lyhyitä sanatarkkoja katkelmia; ympäröivä lause on toimittajan.",nE:"Only short verbatim fragments; the surrounding sentence is the reporter's."},
+{d:"2026-05-21",ev:"Bloomberg \"The Close\" (CryptoBriefing-referaatti; vuosi epäsuora)",evE:"Bloomberg \"The Close\" (CryptoBriefing write-up; year indirect)",gist:"LLM:t \"käytännössä vanhentuneita\" viidessä vuodessa",gistE:"LLMs \"largely obsolete\" within five years",q:["largely obsolete (LLMs across most applications within five years)"],tags:["aikataulu","skaalaus"],url:"https://cryptobriefing.com/yann-lecun-llm-limitations-bloomberg/",src:"CryptoBriefing",v:2,n:"Vain tämä yksi suora sitaatti; päivä 21.5. ja vuosi 2026 ovat epäsuoria.",nE:"Only this one direct quote; the date (21 May) and year (2026) are indirect."},
+{d:"2026-07-29",ev:"RAISE Summit 2026 (French Tech Journal)",evE:"RAISE Summit 2026 (French Tech Journal)",gist:"Oikeissa signaaleissa LLM:t ovat \"täysin hyödyttömiä\"",gistE:"On real-world signals, LLMs are \"completely useless\"",q:["when it comes to real signals, video sensors from industry or whatever, LLMs are completely useless, essentially.","A four-year-old has seen as much training data as the biggest LLMs.","The very idea of a generative model does not work in the real world,"],tags:["maailmamalli","teksti vs. maailma"],url:"https://ami.frenchtechjournal.com/news/lecun-at-raise-llms-hit-a-wall-and-europe-can-win-the-next-race",src:"French Tech Journal",v:1}
+];
+
+/* ================= STATE OF AI ================= */
+const U={
+ arc:"https://arcprize.org/leaderboard",
+ arcAstra:"https://arcprize.org/blog/astra",
+ hle:"https://en.wikipedia.org/wiki/Humanity%27s_Last_Exam",
+ aaOmni:"https://artificialanalysis.ai/evaluations/omniscience",
+ aiIdx:"https://hai.stanford.edu/ai-index/2026-ai-index-report",
+ metr:"https://metr.org/blog/2026-01-29-time-horizon-1-1/",
+ metrTH:"https://metr.org/time-horizons/",
+ metrTrack:"https://agitracker.io/blog/metr-time-horizons-2026/",
+ genie4:"https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+ genie4tc:"https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
+ gr25:"https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+ quanta:"https://www.quantamagazine.org/how-ai-tore-through-a-mathematical-community-20260803/",
+ imo26:"https://www.malaymail.com/amp/news/tech-gadgets/2026/07/23/huawei-xiaohongshu-ai-storm-olympiad-join-maths-elite-with-perfect-100pc-score/228720",
+ clb:"https://arxiv.org/html/2606.05661v1",
+ fm:"https://benchlm.ai/benchmarks/frontiermathv2tier4",
+ fmHub:"https://aiadoption.org/data/ai-maths-benchmarks-explorer/",
+ newt:"https://huggingface.co/papers/2606.03986",
+ ami:"https://www.startuphub.ai/ai-news/ai-figures/2026/figure-yann-lecun-ami-labs-company-breakdown-2026-05-29",
+ safety:"https://arxiv.org/pdf/2602.21012",
+ arc3launch:"https://arcprize.org/media/ARC_AGI_3_Technical_Report.pdf",
+ arc3news:"https://fourweekmba.com/ai-openais-gpt-6-2-astra-is-first-to-100-on-arc-agi-3-4-1k/",
+ scal:"https://www.emergentmind.com/papers/2607.16097",
+ hallAgg:"https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/"
+};
+const STATE=[
+{id:"reason",ic:"🧠",title:T("Päättely- ja tietobenchmarkit","Reasoning & knowledge benchmarks"),
+ head:T("Vanhat benchmarkit ovat käytännössä saturoituneet; vaikeimmilla kärki on 70–80 %.","Older benchmarks are effectively saturated; on the hardest ones the lead is 70–80%."),
+ rows:[
+ {l:T("Humanity's Last Exam (HLE-Diamond, 1000 kys.)","Humanity's Last Exam (HLE-Diamond, 1000 q.)"),v:"80.2 %",n:T("Claude Fable 5.2 johtaa; GPT-6.2 Astra 72.2 %, Gemini 4 Neon 71.3 % (Artificial Analysis, 19.11.2026). Huom: FutureHouse arvioi jopa ~30 % bio/kemia-vastauksista voivan olla väärin → kattoa ei voi tulkita tarkasti.","Claude Fable 5.2 leads; GPT-6.2 Astra 72.2%, Gemini 4 Neon 71.3% (Artificial Analysis, 19 Nov 2026). Note: FutureHouse estimated up to ~30% of bio/chem answers may be wrong → the ceiling can't be read precisely."),c:1,u:U.hle,s:"Wikipedia/AA"},
+ {l:T("ARC-AGI-1 / ARC-AGI-2","ARC-AGI-1 / ARC-AGI-2"),v:"98.5 % / 95.8 %",n:T("ARC-AGI-2: GPT-6.2 Astra 95.8 % (17.11.2026, ~24 000 $ ajolta); ARC-AGI-1: kärki jaettu (GPT-6.2 Astra, Gemini 4 Carbon, Claude Fable 5.2). Ennen \"vaikeita uusia ongelmia\" – nyt käytännössä ratkaistu.","ARC-AGI-2: GPT-6.2 Astra 95.8% (17 Nov 2026, ~$24K run); ARC-AGI-1: shared lead (GPT-6.2 Astra, Gemini 4 Carbon, Claude Fable 5.2). Once the \"novel hard problems\" test — now effectively solved."),c:1,u:U.arc,s:"ARC Prize"},
+ {l:T("FrontierMath Tier 4","FrontierMath Tier 4"),v:"48 % … ~100 %",n:T("Alkuperäinen Tier 4: paras 48 %. v2-taulukoissa 87,8–100 %, ja taulukot ovat keskenään ristiriitaisia; Epoch korjasi ~135/350 tehtävää virheiden vuoksi.","Original Tier 4: best 48%. v2 boards show 87.8–100% and disagree with each other; Epoch revised ~135/350 problems after errors."),c:2,u:U.fm,s:"BenchLM (aggregator)"},
+ {l:T("Matematiikkaolympialaiset (IMO)","International Math Olympiad (IMO)"),v:T("kulta 2025 → täydet pisteet 2026 (väitetty)","gold 2025 → perfect scores 2026 (claimed)"),n:T("2025: Gemini Deep Think kulta (virallisesti arvioitu, 35/42). 2026: Huawei ja Xiaohongshu väittävät täydet pisteet virallisella arvioinnilla; epävirallisesti neljä kehittynyttä mallia 42/42 (vain 7/666 ihmistä sai täydet).","2025: Gemini Deep Think gold (officially graded, 35/42). 2026: Huawei and Xiaohongshu claim perfect scores under official grading; informally four frontier models 42/42 (only 7/666 humans got full marks)."),c:2,u:U.imo26,s:"Malay Mail"},
+ {l:T("Todellinen matematiikan tutkimus","Real mathematics research"),v:T("Erdős #90 kumottu","Erdős #90 disproved"),n:T("OpenAI:n julkaisematon malli kumosi tasoyksikköetäisyysongelman (Erdős #90) toukokuussa 2026, ihmisasiantuntijat validoivat; ~100 Erdős-ongelmaa siirtynyt \"ratkaistuiksi\" (iso osa kirjallisuushakua). Quanta: tulos on historiallisesti merkittävä, mutta suuret avoimet ongelmat ovat yhä ulottumattomissa.","An unreleased OpenAI model disproved the planar unit-distance problem (Erdős #90) in May 2026, validated by human experts; ~100 Erdős problems moved to \"solved\" (much of it literature search). Quanta: historically significant, but major open problems remain out of reach."),c:2,u:U.quanta,s:"Quanta"}
+ ]},
+{id:"arc3",ic:"🧩",title:T("ARC-AGI-3: uuden oppiminen interaktiivisessa ympäristössä","ARC-AGI-3: learning new things in interactive environments"),
+ head:T("Maaliskuussa alle 1 % — marraskuussa 70 %. Suurin yksittäinen hyppy tässä katsauksessa, mutta tulkinta riippuu harnessista.","Under 1% in March — 70% in November. The biggest single jump in this review, but interpretation depends on the harness."),
+ rows:[
+ {l:T("Julkaisu 25.3.2026","Launch 25 Mar 2026"),v:"< 1 %",n:T("Gemini 3.1 Pro 0,37 %, GPT-5.4 0,26 %, Claude Opus 4.6 0,25 %; ihmiset ratkaisevat kaikki ympäristöt.","Gemini 3.1 Pro 0.37%, GPT-5.4 0.26%, Claude Opus 4.6 0.25%; humans solve all environments."),c:2,u:U.arc3launch,s:"ARC Prize technical report"},
+ {l:T("Nyt: Standard-harness","Now: Standard harness"),v:"70.3 %",n:T("GPT-6.2 Astra, 17.11.2026, ~24 200 $. Malli säilyttää itse valitsemiaan muistiinpanoja askelten välillä. Kilpailun tulokset julki 4.12.2026.","GPT-6.2 Astra, 17 Nov 2026, ~$24.2K. The model carries forward notes it chooses itself between steps. Competition results due 4 Dec 2026."),c:1,u:U.arc,s:"ARC Prize"},
+ {l:T("Nyt: Provider adapter -harness","Now: Provider adapter harness"),v:"100 %",n:T("Sama malli, ~4 100 $. Harness säilyttää mallin sisäisen päättelytilan pyyntöjen välillä → ARC Prizen mukaan rajallisesti vertailtavissa; 100 % kertoo harnessista ainakin yhtä paljon kuin mallista (toissijainen selitys).","Same model, ~$4.1K. The harness preserves the model's opaque reasoning state between requests → limited comparability per ARC Prize; 100% says as much about the harness as the model (secondary explanation)."),c:2,u:U.arc3news,s:"FourWeekMBA"}
+ ]},
+{id:"agents",ic:"🛠️",title:T("Agentit, koodaus ja pitkät tehtävät","Agents, coding & long tasks"),
+ head:T("Pitkien tehtävien kyky kasvaa nopeasti, mutta luotettavuus pitkillä tehtävillä on yhä selvästi heikompi.","Long-task ability grows fast, but reliability on long tasks is still clearly weaker."),
+ rows:[
+ {l:T("SWE-bench Verified","SWE-bench Verified"),v:T("~ 60 % → ~100 %","~60% → ~100%"),n:T("Stanford AI Index 2026: nousu yhdessä vuodessa; benchmark on käytännössä saturoitu. SWE-bench Pro -lukuja en saanut luotettavasti.","Stanford AI Index 2026: rose in one year; the benchmark is effectively saturated. I couldn't get reliable SWE-bench Pro figures."),c:1,u:U.aiIdx,s:"Stanford AI Index"},
+ {l:T("METR: 50 %:n aikahorisontti","METR: 50% time horizon"),v:T("2 h → 5 h (2025) → ~17 h","2 h → 5 h (2025) → ~17 h"),n:T("GPT-5 214 min, Claude Opus 4.5 320 min (METR TH1.1). Tuplautumisaika 131 pv (2023→) ja 88,6 pv (2024→). Uusin Claude Mythos Preview ≈17 h (50 %) / ≈3 h (80 %) toissijaisen trackerin mukaan; METR: yli 16 h mittaukset epäluotettavia. METR-sivua ei enää päivitetä aktiivisesti (8.9.2026).","GPT-5 214 min, Claude Opus 4.5 320 min (METR TH1.1). Doubling 131 days (2023→) and 88.6 days (2024→). Latest Claude Mythos Preview ≈17 h (50%) / ≈3 h (80%) per a secondary tracker; METR: measurements above 16 h unreliable. METR's page is no longer actively updated (8 Sep 2026)."),c:2,u:U.metr,s:"METR + tracker",u2:U.metrTrack},
+ {l:T("OSWorld (tietokoneen käyttö)","OSWorld (computer use)"),v:"66.3 %",n:T("Ihmisen perustaso 72,35 % (AI Index, vuoden 2025 tulos). Agentit epäonnistuvat yhä noin joka kolmannessa rakenteellisessa testissä.","Human baseline 72.35% (AI Index, 2025 result). Agents still fail about 1 in 3 structured tasks."),c:1,u:U.aiIdx,s:"Stanford AI Index"},
+ {l:T("Käyttöönotto tuotannossa","Production deployment"),v:T("varhainen vaihe","early stage"),n:T("Toissijaisen tiivistelmän mukaan autonomisten agenttien käyttö liiketoimintafunktioissa on vielä yksinumeroisissa luvuissa. Kansainvälinen AI-turvaraportti 2026 varoittaa, etteivät benchmark-tehtävät sisällä \"sotkuista\" todellisuutta.","Per a secondary summary autonomous-agent deployment across business functions is still in single digits. The International AI Safety Report 2026 warns benchmark tasks lack \"messy\" real-world features."),c:2,u:U.safety,s:"Int'l AI Safety Report"}
+ ]},
+{id:"fact",ic:"🎯",title:T("Faktuaalisuus ja luotettavuus","Factuality & reliability"),
+ head:T("Hallusinointi on pienentynyt selvästi parhaissa malleissa, mutta ei ole kadonnut — ja tarkkuus vs. varovaisuus on kompromissi.","Hallucination has dropped clearly in the best models but hasn't vanished — and accuracy vs. caution is a trade-off."),
+ rows:[
+ {l:T("AA-Omniscience","AA-Omniscience"),v:T("tarkkuus 79 % · hallusinointi 4 %","accuracy 79% · hallucination 4%"),n:T("Korkein tarkkuus: Claude Fable 5.2 (Max) 79 %. Pienin hallusinointi: Gemini 4 Carbon/Argon 4 % — eri kategorioissa, joten samaa mallia ei voi lukea molemmista. Aggregaattisivujen luvut ovat keskenään ristiriitaisia (esim. 72,6 % jollekin mallille).","Highest accuracy: Claude Fable 5.2 (Max) 79%. Lowest hallucination: Gemini 4 Carbon/Argon 4% — in separate categories, so one model can't be read from both. Aggregator pages conflict (e.g. 72.6% for one model)."),c:1,u:U.aaOmni,s:"Artificial Analysis",u2:U.hallAgg},
+ {l:T("\"Jagged frontier\"","\"Jagged frontier\""),v:T("analogikello 50,1 %","analog clock 50.1%"),n:T("AI Index: paras malli lukee analogikellon oikein vain 50,1 %:ssa tapauksista; dokumentoidut tekoälyincidentit 362 (233 vuonna 2024); Foundation Model Transparency Index 58 → 40.","AI Index: the top model reads an analog clock correctly only 50.1% of the time; documented AI incidents 362 (233 in 2024); Foundation Model Transparency Index 58 → 40."),c:1,u:U.aiIdx,s:"Stanford AI Index"}
+ ]},
+{id:"world",ic:"🌍",title:T("Maailmamallit ja fysiikan ymmärrys","World models & physical understanding"),
+ head:T("Generatiiviset maailmamallit toimivat nyt reaaliajassa — mutta pitkäkestoinen johdonmukaisuus ja monimutkainen fysiikka ovat yhä auki.","Generative world models now run in real time — but long-duration consistency and complex physics remain open."),
+ rows:[
+ {l:T("Genie 4 (27.10.2026)","Genie 4 (27 Oct 2026)"),v:T("reaaliaikainen + ääni","real-time + audio"),n:T("Natiivisti ääni, ilmanvastus- ja törmäysfysiikkaa, tekstiohjaus kesken simulaation; Gemini voi toimia agenttina maailmassa. DeepMind itse: objektien pysyvyys ja yksityiskohdat ajautuvat pitkillä ajoilla; monimutkaisen fysiikan tarkkuutta ei mitata. Vain luotetuille testaajille.","Native audio, aerodynamics/collision physics, text steering mid-simulation; Gemini can act as an agent in the world. DeepMind itself: object permanence and details drift over longer runs; complex-physics accuracy not measured. Trusted testers only."),c:1,u:U.genie4,s:"DeepMind",u2:U.genie4tc},
+ {l:T("Waymo, Runway ym.","Waymo, Runway etc."),v:T("käytössä simulaatiossa","in use for simulation"),n:T("Waymo otti Genie 3:n käyttöön helmikuussa 2026 ajosimulaation maailmamallina; Runway GWM Worlds 2 syyskuussa 2026 (toissijaiset).","Waymo adopted Genie 3 in Feb 2026 as a driving-simulation world model; Runway GWM Worlds 2 in Sep 2026 (secondary)."),c:2,u:U.genie4tc,s:"TechCrunch/haku"},
+ {l:T("JEPA / AMI Labs","JEPA / AMI Labs"),v:T("ei vielä julkista mallia","no public model yet"),n:T("Meta julkaisi V-JEPA 2.1:n maaliskuussa 2026 (ilman LeCunia). AMI Labs: 1,03 mrd $ siemenkierros; ensimmäistä mallia hiotaan vuoden loppuun, teollisia sovelluksia toivotaan 2027 (toissijainen). JEPA:n kyky isossa mittakaavassa on yhä todistamatta.","Meta released V-JEPA 2.1 in March 2026 (without LeCun). AMI Labs: $1.03B seed; first model refined through year end, industrial applications hoped for in 2027 (secondary). JEPA at scale is still unproven."),c:2,u:U.ami,s:"StartupHub"},
+ {l:T("Fysiikan ymmärryksen testit","Physical-understanding tests"),v:T("kohtalaista","modest"),n:T("Physion/Physion++ ja uudet NewtPhys-tulokset: kielimallit (VLM) pärjäävät vain kohtalaisesti; moni suosittu \"maalaisjärki\"-benchmark korreloi heikosti fysiikan kanssa. Suoraa lapsi- tai kissavertailua en löytänyt.","Physion/Physion++ and the new NewtPhys results: vision-language models do only modestly; many popular commonsense benchmarks correlate weakly with physics. I found no direct child or cat comparison."),c:2,u:U.newt,s:"NewtPhys"}
+ ]},
+{id:"robot",ic:"🤖",title:T("Robotiikka","Robotics"),
+ head:T("Selvä harppaus laboratoriotehtävissä, mutta luvut ovat valmistajien omia eikä kotikäytöstä ole todisteita.","A clear leap in lab tasks, but the numbers are the vendors' own and there is no evidence from home use."),
+ rows:[
+ {l:T("Gemini Robotics 2.5 (10.11.2026)","Gemini Robotics 2.5 (10 Nov 2026)"),v:T("200+ tehtävää","200+ tasks"),n:T("Esim. laukun kansi 0→93 %, leivonnaisten pakkaus pihdeillä 5→100 %, housujen taitto 0→40 %; 30–100 % korkeampi onnistumisaste kuin edeltäjillä. Mercedes/Apptronik-pilotti 96 % — yksi todistuspilotti. Kaikki itse raportoitua, arviointimenetelmää ei esitetä.","E.g. toolbox lid 0→93%, packing pastries with tongs 5→100%, folding pants 0→40%; 30–100% higher success than predecessors. Mercedes/Apptronik pilot 96% — a single proof-of-concept. All self-reported, evaluation method not given."),c:1,u:U.gr25,s:"DeepMind"}
+ ]},
+{id:"mem",ic:"🗂️",title:T("Muisti ja jatkuva oppiminen","Memory & continual learning"),
+ head:T("Muisti toteutetaan työkaluilla ja kontekstilla; painotason jatkuva oppiminen on yhä avoin tutkimusongelma.","Memory is implemented through tools and context; weight-level continual learning is still an open research problem."),
+ rows:[
+ {l:T("Continual Learning Bench (2026)","Continual Learning Bench (2026)"),v:T("heikko","weak"),n:T("Kärkimallit ylisovittuvat välittömiin havaintoihin eivätkä käytä tietoa uudelleen tehtävästä toiseen; erilliset muistijärjestelmät eivät korjanneet ongelmaa ja pelkkä kontekstissa oppiminen oli välillä parempi.","Frontier models overfit to immediate observations and fail to reuse knowledge across tasks; dedicated memory systems didn't fix this and plain in-context learning sometimes beat them."),c:2,u:U.clb,s:"arXiv 2606.05661"},
+ {l:T("Painotason oppiminen","Weight-level learning"),v:T("avoin","open"),n:T("Agenteilla on muistityökalut mutta painot jäätyneet (blogikatsaus); Googlen Nested Learning on ehdotus, ei tuote. En löytänyt varmennettua tuotantoon päässyttä jatkuvaa oppimista.","Agents have memory tools but frozen weights (blog overview); Google's Nested Learning is a proposal, not a product. I found no verified continual learning in production."),c:3,u:U.clb,s:"blogi/arXiv"}
+ ]},
+{id:"scale",ic:"📈",title:T("Skaalaus, data ja talous","Scaling, data & economy"),
+ head:T("Pelkän esikoulutuksen tuotto hidastuu; kasvu tulee RL:stä, testiaikalaskennasta ja synteettisestä datasta.","Returns on pure pretraining are slowing; growth comes from RL, test-time compute and synthetic data."),
+ rows:[
+ {l:T("Skaalauskeskustelu","Scaling debate"),v:T("hidastuva esikoulutus","slowing pretraining"),n:T("Useat yleiskatsaukset: pelkkä parametrien/datan lisäys tuottaa laskevaa tuottoa; RL-laskennan osuus kasvaa. Lähteet ovat pääosin selittäviä blogeja — ei laboratorioiden virallisia lukuja.","Several overviews: adding parameters/data alone gives diminishing returns; the share of RL compute is growing. Sources are mostly explainer blogs — not labs' official figures."),c:3,u:U.scal,s:"arXiv-yhteenveto"},
+ {l:T("Kilpailutilanne ja käyttö","Competition & usage"),v:T("USA–Kiina 2,7 %","US–China 2.7%"),n:T("Kärkimallien ero maaliskuussa 2026 vain 2,7 %; Arena 1503 vs 1464. Generatiivinen AI 53 % väestöstä kolmessa vuodessa; organisaatioista 88 %; USA:n yksityiset tekoälyinvestoinnit 285,9 mrd $ (2025); datakeskusten teho 29,6 GW (toissijainen).","Top-model gap in March 2026 only 2.7%; Arena 1503 vs 1464. Generative AI at 53% of the population in three years; 88% of organisations; US private AI investment $285.9B (2025); data-centre power 29.6 GW (secondary)."),c:1,u:U.aiIdx,s:"Stanford AI Index"}
+ ]}
+];
+const STATE_GAPS=T("<strong>Mitä en saanut varmistettua ensisijaisesta lähteestä:</strong> SWE-bench Pro -luvut · METR:n tuoreimmat (Mythos) arvot · Vectaran hallusinointilistan nykytila · IMO 2026:n virallinen tulosjulkistus · Gemini Robotics 2 -humanoidin saatavuus · AMI Labsin ensimmäisen mallin tila · onko jokin kärkimalli arkkitehtuuriltaan muuta kuin transformer-kielimalli (kärkimallien nimet ovat laboratorioiden lippulaivasarjoja; arkkitehtuuria en tarkistanut).","<strong>What I could not verify from a primary source:</strong> SWE-bench Pro figures · METR's latest (Mythos) values · the current Vectara hallucination leaderboard · the official IMO 2026 results announcement · availability of the Gemini Robotics 2 humanoid · status of AMI Labs' first model · whether any top model is architecturally something other than a transformer language model (the top names are labs' flagship families; I did not check architecture).");
+
+/* ================= CLAIMS vs REALITY ================= */
+const CLAIMS=[
+{id:"c-reason",topic:"reasoning",verdict:"wrong",st:3,dates:["2024-03-07","2024-05-22","2025-01-23","2025-03-19","2025-08-01"],
+ claim:T("LLM:t eivät päättele (“can't really reason”, “System 1”, “good at language, not at thinking”, token-haku “hopeless”).","LLMs don't reason (“can't really reason”, “System 1”, “good at language, not at thinking”, token search “hopeless”)."),
+ q:"They can't really reason … that's clearly System 1—it's reactive, right? There's no reasoning",
+ now:T("Päättelymallit (esim. o1-sukupolvesta alkaen — ilmestyi syyskuussa 2024, siis <em>Lex-haastattelun jälkeen</em>) ratkaisevat nyt olympiatason matematiikkaa, HLE-Diamond 80,2 %, ARC-AGI-2 95,8 %, ja OpenAI:n sisäinen malli kumosi Erdős #90 -ongelman. Jos \"ei päättelyä\" on empiirinen väite, se on kumottu: kykyä ei voi enää selittää pelkällä ulkoa-muistamisella.","Reasoning models (from the o1 generation on — released September 2024, i.e. <em>after</em> the Lex interview) now solve olympiad-level maths, HLE-Diamond 80.2%, ARC-AGI-2 95.8%, and an internal OpenAI model disproved Erdős #90. If “no reasoning” is an empirical claim, it is refuted: the ability can't be explained by memorisation alone."),
+ cav:T("Hän voi väittää, ettei \"token-päättely + haku\" ole <em>oikeaa</em> päättelyä. Se on määrittelykysymys — mutta tulokset ovat mitattavissa, ja ennuste \"ei toimi pitkillä sekvensseillä\" epäonnistui. IMO 2026 -tulokset ovat osin yritysten omia väitteitä.","He can argue that “token reasoning + search” isn't <em>real</em> reasoning. That is a definitional point — but the outcomes are measurable, and the prediction “doesn't work beyond short sequences” failed. IMO 2026 results are partly companies' own claims."),
+ ev:[["HLE",U.hle],["ARC Prize",U.arc],["IMO 2026",U.imo26],["Quanta (Erdős)",U.quanta]]},
+{id:"c-plan",topic:"planning",verdict:"wrong",st:2,dates:["2024-03-07","2026-01-22"],
+ claim:T("LLM:t eivät osaa suunnitella — eivät varsinkaan tilanteissa joita ne eivät ole nähneet.","LLMs can't plan — least of all in situations they've never encountered."),
+ q:"They’re not going to be able to plan for situations where that they never encountered before.",
+ now:T("ARC-AGI-3 (uudet interaktiiviset pelit, ei harjoiteltavia esimerkkejä): kaikki mallit &lt; 1 % maaliskuussa → GPT-6.2 Astra 70,3 % Standard-harnessilla marraskuussa. METR:n 50 %:n aikahorisontti on kasvanut 2 tunnista (GPT-5) kymmeniin tunteihin noin 9 kuukaudessa (toissijainen luku).","ARC-AGI-3 (new interactive games, no examples to train on): all models &lt; 1% in March → GPT-6.2 Astra 70.3% on the Standard harness in November. METR's 50% time horizon grew from ~2 h (GPT-5) to double-digit hours in ~9 months (secondary figure)."),
+ cav:T("Luotettavuus pitkillä tehtävillä on heikompi: 80 %:n horisontti on vain noin 3 h, agentit epäonnistuvat ~1/3 rakenteellisista testeistä, METR:n mittaus tukkeutuu 16 h:iin ja ARC-AGI-3:n 100 % on harnessista riippuvainen. Ilmiö on siis todellinen, mutta ei \"ei osaa\".","Reliability on long tasks is weaker: the 80% horizon is only ~3 h, agents fail ~1/3 of structured tasks, METR's measurement saturates at 16 h, and ARC-AGI-3's 100% depends on the harness. So the limit is real, but it is not “can't”."),
+ ev:[["ARC-AGI-3",U.arc],["METR TH1.1",U.metr],["METR page",U.metrTH],["AI Index",U.aiIdx]]},
+{id:"c-err",topic:"planning",verdict:"wrong",st:2,dates:["2024-03-07","2025-09-10"],
+ claim:T("Virheet kasautuvat eksponentiaalisesti: P(oikein) = (1−e)ⁿ, joten pitkät vastaukset hajoavat.","Errors compound exponentially: P(correct) = (1−e)ⁿ, so long answers fall apart."),
+ q:"the probability that an answer would be nonsensical increases exponentially with the number of tokens",
+ now:T("Mallit tuottavat nyt tuntien ja kymmenien tuntien pituisia onnistuneita työketjuja (METR) ja korjaavat itseään. Virheet eivät ole riippumattomia ja RL-koulutus palkitsee takaisinperumisen, joten kaava ei kuvaa todellisuutta.","Models now produce successful work chains lasting hours to tens of hours (METR) and self-correct. Errors aren't independent and RL rewards backtracking, so the formula doesn't describe reality."),
+ cav:T("Ilmiö on osin todellinen: 80 %:n horisontti on paljon lyhyempi kuin 50 %:n. Mutta rappeutuminen on hidasta, ei \"eksponentiaalista doomia\".","The phenomenon is partly real: the 80% horizon is much shorter than the 50% one. But decay is slow, not “exponential doom”."),
+ ev:[["METR TH1.1",U.metr],["METR page",U.metrTH]]},
+{id:"c-mem",topic:"memory",verdict:"right",st:2,dates:["2024-03-07","2024-05-22"],
+ claim:T("LLM:illä ei ole pysyvää muistia.","LLMs have no persistent memory."),
+ q:"They don't really have persistent memory.",
+ now:T("Muisti toteutetaan työkaluilla ja kontekstilla; painot ovat jäässä. Continual Learning Bench (2026) osoittaa, että kärkimallit eivät käytä tietoa uudelleen tehtävästä toiseen. Painotason jatkuva oppiminen on yhä avoin.","Memory is done through tools and context; weights are frozen. Continual Learning Bench (2026) shows frontier models don't reuse knowledge across tasks. Weight-level continual learning is still open."),
+ cav:T("Tuotteissa on \"muistiominaisuuksia\", jotka tekevät käytännön eron pienemmäksi kuin väite antaa ymmärtää. Näyttö painotason tilasta on toissijaista.","Products have “memory features”, so the practical gap is smaller than the claim implies. Evidence on weight-level status is secondary."),
+ ev:[["Continual Learning Bench",U.clb]]},
+{id:"c-phys",topic:"physical",verdict:"right",st:1,dates:["2023-02-05","2024-02-15"],
+ claim:T("Kotikissalla on enemmän maalaisjärkeä ja maailman ymmärrystä kuin yhdelläkään LLM:llä.","A house cat has more common sense and understanding of the world than any LLM."),
+ q:"A house cat has way more common sense and understanding of the world than any LLM.",
+ now:T("Fysiikka- ja kellotestit osoittavat yhä aukkoja: paras malli lukee analogikellon 50,1 %:sti, VLM:t pärjäävät Physion/NewtPhys-testeissä vain kohtalaisesti, Genie 4:n pysyvyys ajautuu pitkillä ajoilla, ja robotti taittaa housut 40 %:n onnistumisella.","Physics and clock tests still show gaps: the best model reads an analog clock 50.1% of the time, VLMs do only modestly on Physion/NewtPhys, Genie 4's consistency drifts over long runs, and a robot folds pants with 40% success."),
+ cav:T("Heikko näyttö: kukaan ei ole mitannut kissa vs. LLM suoraan, ja vertailu on määrittelykysymys. Samalla robotiikka ja maailmamallit etenevät nopeasti.","Weak evidence: nobody has measured cat vs. LLM directly, and the comparison is partly definitional. Meanwhile robotics and world models are advancing fast."),
+ ev:[["AI Index",U.aiIdx],["NewtPhys",U.newt],["Genie 4",U.genie4],["Gemini Robotics 2.5",U.gr25]]},
+{id:"c-gen",topic:"physical",verdict:"wrong",st:2,dates:["2026-07-29"],
+ claim:T("Generatiivinen malli ei toimi oikeassa maailmassa; LLM:t ovat \"täysin hyödyttömiä\" oikeissa sensorisignaaleissa.","The very idea of a generative model doesn't work in the real world; LLMs are “completely useless” on real sensor signals."),
+ q:"The very idea of a generative model does not work in the real world,",
+ now:T("Genie 4 on generatiivinen, reaaliaikainen maailmamalli; Waymo käyttää Genie 3 -pohjaista mallia ajosimulaatioon; Gemini Robotics 2.5 (kielimallipohjainen VLA) tekee 200+ tehtävää oikeilla roboteilla ja Mercedes-pilotissa 96 % onnistumista.","Genie 4 is a generative real-time world model; Waymo uses a Genie 3–based model for driving simulation; Gemini Robotics 2.5 (a language-model-based VLA) performs 200+ tasks on real robots, 96% in a Mercedes pilot."),
+ cav:T("Robotiikkaluvut ovat valmistajan itse raportoimia, Waymo-tieto toissijainen, ja Genie 4 -johdonmukaisuus rajallista. \"Ei toimi lainkaan\" on silti liian vahva; \"ei vielä riittävän luotettavasti\" voisi pitää.","Robotics figures are vendor self-reports, the Waymo item is secondary, and Genie 4's consistency is limited. “Doesn't work at all” is still too strong; “not reliably enough yet” might hold."),
+ ev:[["Genie 4",U.genie4],["Genie 4 (TechCrunch)",U.genie4tc],["Gemini Robotics 2.5",U.gr25]]},
+{id:"c-vla",topic:"physical",verdict:"pess",st:1,dates:["2026-05-18"],
+ claim:T("VLA-mallit \"nähdään nyt epäonnistumisena\"; nykymenetelmien skaalaus fyysiseen älyyn on umpikuja.","VLA models are “now being seen as a failure”; scaling current methods for physical intelligence is a dead end."),
+ q:"basically now being seen as a failure",
+ now:T("Marraskuun 2026 Gemini Robotics 2.5 (VLA) raportoi suuria hyppyjä (0→93 %, 5→100 %) ja kymmenien prosenttien nopeampaa suoritusta. Epäonnistumiseksi tulkinta on vaikea perustella.","November 2026's Gemini Robotics 2.5 (a VLA) reports big jumps (0→93%, 5→100%) and 20–30% faster completion. Hard to justify reading that as a failure."),
+ cav:T("Heikko: vain yksi lähde LeCunin sanoista, ja robotiikan todellinen kotikäyttö ja luotettavuus ovat todistamatta. Hänen \"epäonnistuminen\" voi tarkoittaa tutkijayhteisön mielipidettä, ei laboratorion lukuja.","Weak: one source for LeCun's words, and real home-use reliability in robotics is unproven. His “failure” may mean the research community's opinion, not lab numbers."),
+ ev:[["Gemini Robotics 2.5",U.gr25]]},
+{id:"c-scale",topic:"scaling",verdict:"pess",st:1,dates:["2022-06-24","2025-03-19","2026-01-22"],
+ claim:T("LLM:ien skaalaus ei johda ihmistason älyyn (\"not for one second\", \"nonsense\", \"breakthroughs won't come from scaling\").","Scaling up LLMs won't lead to human-level AI (“not for one second”, “nonsense”, “breakthroughs won't come from scaling”)."),
+ q:"I don't believe this at all, not for one second.",
+ now:T("Eteneminen on ollut valtavaa: HLE 8,8 % (2025) → 80 %, ARC-AGI-3 &lt;1 % → 70 % kahdeksassa kuukaudessa, SWE-bench ~100 %. Osa hypystä tulee RL:stä ja testiaikalaskennasta eikä puhtaasta esikoulutuksesta — hän oli oikeassa, ettei \"pelkkä skaalaus\" ole koko tarina — mutta LLM-pohjaiset järjestelmät ovat ylittäneet rajat jotka hän piti ylittämättöminä.","Progress has been huge: HLE 8.8% (2025) → 80%, ARC-AGI-3 &lt;1% → 70% in eight months, SWE-bench ~100%. Part of the leap comes from RL and test-time compute rather than pure pretraining — he was right that “just scaling” isn't the whole story — but LLM-based systems have crossed limits he treated as uncrossable."),
+ cav:T("\"Ihmistaso\" on määrittelemätön eikä sitä ole saavutettu (jagged frontier, muisti, luotettavuus). Skaalausosuuden erottaminen RL:stä ei ole mahdollista julkisen datan perusteella.","“Human level” is undefined and not reached (jagged frontier, memory, reliability). Public data can't separate scaling from RL contributions."),
+ ev:[["AI Index",U.aiIdx],["HLE",U.hle],["ARC Prize",U.arc]]},
+{id:"c-lang",topic:"scaling",verdict:"open",st:1,dates:["2022-08-23","2025-03-19","2025-08-01","2026-01-23"],
+ claim:T("Pelkällä tekstillä koulutettu järjestelmä ei koskaan yllä ihmistason älyyn.","A system trained on text alone will never reach human-level intelligence."),
+ q:"We're never going to get to human-level intelligence by training LLMs or by training on text only.",
+ now:T("Kärkimallit eivät ole enää \"pelkkää tekstiä\": ne ovat multimodaalisia ja RL-koulutettuja, joten väite koskee yhä harvempaa todellista järjestelmää. Toisaalta tekstipainotteiset mallit saavuttavat asiantuntijatason matematiikassa ja tieteessä. \"Never\" on empiirisesti testaamaton.","Frontier models are no longer “text alone”: they are multimodal and RL-trained, so the claim applies to fewer real systems. Yet text-heavy models reach expert level in maths and science. “Never” is empirically untestable."),
+ cav:T("Ratkeaa vasta jos/kun \"ihmistaso\" voidaan määritellä; ARC-AGI-3 ja pitkät agenttitehtävät ovat lähimmät testit.","Only resolves if/when “human level” can be defined; ARC-AGI-3 and long agent tasks are the closest tests."),
+ ev:[["ARC Prize",U.arc],["Stanford AI Index",U.aiIdx]]},
+{id:"c-data",topic:"scaling",verdict:"part",st:1,dates:["2024-12-23"],
+ claim:T("Pelkän tekstin skaalaus ei enää riitä — jopa Ilya on kääntynyt.","Scaling text alone no longer suffices — even Ilya has changed his mind."),
+ q:"Ilya was famously a believer in that concept and now apparently not anymore",
+ now:T("Useat yleiskatsaukset kuvaavat esikoulutuksen tuoton hidastumista ja siirtymää RL:ään, testiaikalaskentaan ja synteettiseen dataan — sama suunta kuin hänen kommenttinsa. Mutta tämä ei ole pysäyttänyt kokonaiskehitystä.","Several overviews describe diminishing pretraining returns and a shift to RL, test-time compute and synthetic data — the same direction as his comment. But that hasn't stopped overall progress."),
+ cav:T("Lähteet ovat pääosin selittäviä blogeja; laboratorioiden omia lukuja ei ole.","Sources are mostly explainer blogs; no labs' own figures."),
+ ev:[["Scaling summary",U.scal]]},
+{id:"c-fact",topic:"factual",verdict:"pess",st:2,dates:["2025-09-10"],
+ claim:T("Autoregressiivisia LLM:iä ei voi tehdä faktuaalisiksi, myrkyttömiksi tai hallittaviksi.","Autoregressive LLMs cannot be made factual, non-toxic or controllable."),
+ q:"They cannot be made factual, non-toxic, etc. They are not controllable,",
+ now:T("AA-Omniscience: pienin hallusinointi nyt 4 % (Gemini 4 Carbon/Argon), korkein tarkkuus 79 %. Mallit kieltäytyvät yhä useammin arvaamasta. Googlen robottimalli ilmoittaa 99,5 %:n jailbreak-kestävyyden (itse raportoitu).","AA-Omniscience: lowest hallucination now 4% (Gemini 4 Carbon/Argon), highest accuracy 79%. Models increasingly abstain rather than guess. Google's robotics model reports 99.5% jailbreak resistance (self-reported)."),
+ cav:T("Ongelma ei ole ratkaistu: tarkkuus ja varovaisuus ovat kompromissi, aggregaattien luvut ovat ristiriitaisia ja dokumentoidut incidentit nousivat 233 → 362. \"Cannot\" on silti liian vahva.","Not solved: accuracy and caution trade off, aggregator figures conflict, and documented incidents rose 233 → 362. “Cannot” is still too strong."),
+ ev:[["AA-Omniscience",U.aaOmni],["AI Index",U.aiIdx],["Gemini Robotics 2.5",U.gr25]]},
+{id:"c-child",topic:"scaling",verdict:"right",st:2,dates:["2025-09-10","2026-07-29"],
+ claim:T("Nelivuotias on nähnyt yhtä paljon (tai enemmän) dataa kuin suurimmat LLM:t.","A four-year-old has seen as much (or more) data than the biggest LLMs."),
+ q:"A four-year-old has seen as much training data as the biggest LLMs.",
+ now:T("Aritmeettinen vertailu on yhä vakiintunut eikä sitä ole kumottu; tiedon tehokkuus (oppiminen vähällä datalla) on edelleen ihmisen vahvuus, ja jatkuva oppiminen puuttuu (ks. muisti).","The arithmetic comparison still stands and hasn't been refuted; sample efficiency remains a human strength, and continual learning is missing (see memory)."),
+ cav:T("Vertailun relevanssi on kiistanalainen: mallit ovat nyt multimodaalisia, ja suorituskyky mitataan eri tavalla.","The relevance is debated: models are now multimodal, and performance is measured differently."),
+ ev:[["AI Index",U.aiIdx],["Continual Learning Bench",U.clb]]},
+{id:"c-ai",topic:"impact",verdict:"part",st:2,dates:["2023-01-23","2023-01-24"],
+ claim:T("ChatGPT ei ole tekniikaltaan uusi eikä mullistava.","ChatGPT is not technically novel or revolutionary."),
+ q:"In terms of underlying techniques, ChatGPT is not particularly innovative",
+ now:T("Teknisesti totta (transformer ja RLHF olivat tunnettuja). Mutta vaikutus on ollut valtava: generatiivinen AI saavutti 53 % väestöstä kolmessa vuodessa (nopeammin kuin PC tai internet), organisaatioiden käyttö 88 %.","Technically true (transformers and RLHF were known). But the impact has been enormous: generative AI reached 53% of the population in three years (faster than the PC or the internet), 88% organisational adoption."),
+ cav:T("Hän korjasi nimenomaan <em>julkista mielikuvaa tekniikan uutuudesta</em>, ei ennustanut käyttöä.","He was correcting the <em>public perception of technical novelty</em>, not forecasting usage."),
+ ev:[["AI Index",U.aiIdx]]},
+{id:"c-fool",topic:"impact",verdict:"pess",st:2,dates:["2026-04-01"],
+ claim:T("LLM:t vain \"huijaavat meidät luulemaan että ne ovat älykkäitä\" — satojen miljardien veto on \"BS\".","LLMs merely “fool us into thinking they are smart” — the hundreds-of-billions bet is “BS”."),
+ q:"We have systems that can manipulate language, and they fool us into thinking they are smart",
+ now:T("\"Pelkkää huijausta\" on vaikea sovittaa yhteen: täydet pisteet IMO:ssa (väitetty), Erdős-kumoukset, HLE 80 %, ARC-AGI-2 95,8 % ja 172 mrd $:n kuluttaja-arvio vuodessa (AI Index).","“Merely fooling” is hard to reconcile with perfect IMO scores (claimed), Erdős disproofs, HLE 80%, ARC-AGI-2 95.8% and a $172B/yr consumer-value estimate (AI Index)."),
+ cav:T("Jagged frontier (analogikello 50 %, agentit ~1/3 epäonnistuvat) ja yritysten vähäinen autonominen käyttö tukevat hänen varauksiaan. Sijoitusväitteen oikeellisuus ei ratkea benchmarkeilla.","The jagged frontier (analog clock 50%, agents fail ~1/3) and limited autonomous enterprise use support his reservations. The investment claim can't be settled by benchmarks."),
+ ev:[["AI Index",U.aiIdx],["IMO 2026",U.imo26],["Quanta",U.quanta]]},
+{id:"c-agi",topic:"timeline",verdict:"open",st:1,dates:["2024-02-14"],
+ claim:T("Ihmistason tekoäly ei ole nurkan takana; vaatii syviä muutoksia havainnoinnissa.","Human-level AI is not around the corner; it will require deep perceptual changes."),
+ q:"So AGI, or human-level AI, is not just around the corner, it's going to require some pretty deep perceptual changes.",
+ now:T("Riippuu määritelmästä. ARC-AGI-3 (70–100 %), IMO ja HLE vetävät \"lähellä\"-suuntaan; muistin puute, pitkän tehtävän luotettavuus ja fysiikka vetävät toiseen.","Depends on the definition. ARC-AGI-3 (70–100%), IMO and HLE point toward “close”; missing memory, long-task reliability and physics point the other way."),
+ cav:T("Ei ratkaistavissa ilman AGI:n määritelmää.","Can't be settled without a definition of AGI."),
+ ev:[["ARC Prize",U.arc],["AI Index",U.aiIdx]]},
+{id:"c-shelf",topic:"timeline",verdict:"open",st:2,dates:["2025-01-23","2026-05-21","2026-05-18"],
+ claim:T("LLM-paradigman kantoaika on 3–5 vuotta; ne ovat \"largely obsolete\" viidessä vuodessa; muutos \"täysin ilmeinen\" 2027 alussa.","The LLM paradigm's shelf life is 3–5 years; “largely obsolete” in five years; the shift “completely obvious” by early 2027."),
+ q:"I think the shelf life of the current [LLM] paradigm is fairly short, probably three to five years",
+ now:T("22 kuukautta ensimmäisen ennusteen jälkeen kaikki tarkistamani kärkimallit ovat laboratorioiden lippulaiva-kielimalleja (GPT-6.2 Astra, Claude Fable 5.2, Gemini 4) — arkkitehtuuria en tarkistanut. Merkkejä korvautumisesta ei näy, mutta ennusteen määräajat eivät ole vielä umpeutuneet.","22 months after the first forecast, every top model I checked is a lab's flagship language-model family (GPT-6.2 Astra, Claude Fable 5.2, Gemini 4) — I didn't check architecture. No sign of replacement yet, but the forecast deadlines have not yet passed."),
+ cav:T("Ensimmäinen kova koe on \"2027 alku\"; viimeinen n. 2030–31.","The first hard test is “early 2027”; the last about 2030–31."),
+ ev:[["ARC Prize",U.arc],["HLE",U.hle],["AMI Labs",U.ami]]},
+{id:"c-wm",topic:"timeline",verdict:"open",st:1,dates:["2026-01-22"],
+ claim:T("LLM:t eivät voi päätellä toimiensa seurauksia, koska niillä ei ole maailmamallia.","LLMs can't predict the consequences of their actions because they lack a world model."),
+ q:"They can't predict the consequences of their actions.",
+ now:T("Genie 4:n kaltaiset maailmamallit ovat <em>ei-LLM-mallit</em> ja tukevat sitä, että maailmamalli on tärkeä — mutta ne kytketään Geminiin ohjaajaksi. ARC-AGI-3-tulokset viittaavat, että LLM-agentit oppivat uusien ympäristöjen dynamiikkaa. JEPA-linjan kyky isossa mittakaavassa on todistamatta (AMI:lla ei vielä julkista mallia).","World models like Genie 4 are <em>non-LLM models</em> and support the idea that world models matter — but they are paired with Gemini as the steering agent. ARC-AGI-3 results suggest LLM agents learn new environments' dynamics. JEPA at scale is unproven (AMI has no public model yet)."),
+ cav:T("Molemmat osapuolet voivat tulkita saman näytön omaksi eduksi.","Both sides can read the same evidence in their favour."),
+ ev:[["Genie 4",U.genie4],["ARC Prize",U.arc],["AMI Labs",U.ami]]},
+{id:"c-safe",topic:"factual",verdict:"open",st:1,dates:["2026-05-18"],
+ claim:T("LLM-pohjaiset agentit ovat luonnostaan epäturvallisia (\"intrinsically unsafe\").","LLM-based agents are “intrinsically unsafe”."),
+ q:"intrinsically unsafe",
+ now:T("Dokumentoidut tekoälyincidentit kasvoivat 233 → 362; läpinäkyvyysindeksi putosi 58 → 40; toisaalta valmistajat raportoivat parempaa jailbreak-kestävyyttä (itse raportoitu).","Documented AI incidents grew 233 → 362; the transparency index fell 58 → 40; vendors, meanwhile, report better jailbreak resistance (self-reported)."),
+ cav:T("\"Luonnostaan\" on arkkitehtuuriväite, jota ei voi ratkaista tilastoilla.","“Intrinsically” is an architectural claim that statistics can't settle."),
+ ev:[["AI Index",U.aiIdx],["Gemini Robotics 2.5",U.gr25]]},
+{id:"c-acad",topic:"scaling",verdict:"part",st:1,dates:["2024-05-22","2026-01-22"],
+ claim:T("LLM-työ on suurten yritysten käsissä — yliopistoilla ei ole mitään tuotavaa (\"don't work on LLMs\").","LLM work is in big companies' hands — academia has nothing to bring (“don't work on LLMs”)."),
+ q:"This is in the hands of large companies, there's nothing you can bring to the table",
+ now:T("Kärkimallien koulutus on todella keskittynyt (USA:n yksityiset investoinnit 285,9 mrd $). Mutta akateeminen ja ulkopuolinen panos on merkittävä: benchmarkit (HLE, ARC, METR), avoimet mallit (Kiina–USA-ero 2,7 %) ja matemaatikot jotka jatkoivat tekoälyn Erdős-tulosta.","Frontier training is indeed concentrated (US private investment $285.9B). But academic and outside contributions are significant: benchmarks (HLE, ARC, METR), open models (US–China gap 2.7%) and mathematicians who extended the AI's Erdős result."),
+ cav:T("Neuvo oli suunnattu opiskelijoille eikä ole empiirinen ennuste.","The advice was aimed at students and is not an empirical forecast."),
+ ev:[["AI Index",U.aiIdx],["Quanta",U.quanta]]}
+];
+
+/* ================= SUMMARY CONTENT ================= */
+const OPEN_BETS=[
+ {bet:T("\"Paradigmamuutos täysin ilmeinen\" (2027 alku)","“Paradigm shift completely obvious” (early 2027)"),when:T("Q1/2027","Q1 2027"),st:T("Kärkimallit ovat yhä LLM-lippulaivoja; AMI:lla ei julkista mallia","Top models still LLM flagships; AMI has no public model")},
+ {bet:T("LLM:t \"largely obsolete\" useimmissa sovelluksissa","LLMs “largely obsolete” in most applications"),when:T("~2030–31 (5 v. toukokuusta 2026 / 3–5 v. tammikuusta 2025: 2028–30)","~2030–31 (5 yrs from May 2026 / 3–5 yrs from Jan 2025: 2028–30)"),st:T("Ei merkkejä; käyttö kasvaa (53 % väestöstä)","No sign; usage growing (53% of the population)")},
+ {bet:T("AMI Labsin ensimmäinen julkinen malli / JEPA isossa mittakaavassa","AMI Labs' first public model / JEPA at scale"),when:T("2026 loppu – 2027","late 2026 – 2027"),st:T("Mallia hiotaan; teollisia sovelluksia 2027 (toissijainen)","Being refined; industrial applications in 2027 (secondary)")},
+ {bet:T("\"Ei koskaan\" ihmistasoon pelkällä tekstikoulutuksella","“Never” human-level on text-only training"),when:T("ei määräaikaa","no deadline"),st:T("Mallit eivät enää ole tekstipohjaisia; testi epäselvä","Models are no longer text-only; test unclear")}
+];
+const TOPIC_SUM={
+ reasoning:{v:"wrong",why:T("Päättelymallit ja matematiikan tulokset kumoavat \"ei päättele\" -väitteen.","Reasoning models and maths results refute “can't reason”.")},
+ planning:{v:"wrong",why:T("ARC-AGI-3 ja METR:n horisontit kumoavat \"ei osaa suunnitella\"; luotettavuus pitkillä tehtävillä silti rajallista.","ARC-AGI-3 and METR horizons refute “can't plan”; long-task reliability is still limited.")},
+ memory:{v:"right",why:T("Painotason jatkuva oppiminen puuttuu yhä; muisti on työkaluilla paikattua.","Weight-level continual learning is still missing; memory is patched with tools.")},
+ physical:{v:"part",why:T("Maalaisjärki/fysiikka heikkoa (hän oikeassa), mutta generatiiviset maailmamallit ja VLA:t toimivat paremmin kuin hän ennusti.","Commonsense/physics weak (he's right), but generative world models and VLAs work better than he predicted.")},
+ scaling:{v:"pess",why:T("Skaalaus + RL on tuonut paljon enemmän kuin hän uskoi; silti \"pelkkä skaalaus\" ei ole koko totuus.","Scaling + RL delivered far more than he believed; still, “just scaling” isn't the whole story.")},
+ factual:{v:"pess",why:T("Hallusinointi on pudonnut selvästi, mutta ongelma ei ole ratkaistu; hallittavuus auki.","Hallucination dropped clearly but is not solved; controllability open.")},
+ timeline:{v:"open",why:T("Ensimmäinen testi 2027 alussa; kaikki hänen määräaikansa ovat vielä edessä.","First test in early 2027; all his deadlines are still ahead.")},
+ impact:{v:"part",why:T("Oikeassa uutuudesta, väärässä vaikutuksesta ja \"vain huijausta\" -väitteestä.","Right about novelty, wrong about impact and about “merely fooling”.")}
+};
+const LEAD=T(
+"<strong>Lyhyt vastaus.</strong><ul class=\"plain qa\"><li><strong>Onko hän LLM-skeptikko? Kyllä — johdonmukaisesti, ainakin kesäkuusta 2022.</strong> Hän epäilee, että kielimallien skaalaus tai pelkkä tekstikoulutus johtaa ihmistason älyyn, ja on sanonut niin haastatteluissa, puheissa ja esseissä vuoteen 2026 asti. Skeptisyys on kuitenkin ehdollista: hän pitää LLM:iä hyödyllisinä ja odottaa niiden säilyvän esim. isompien järjestelmien \"orkestroijana\".</li><li><strong>Onko hän Transformer-skeptikko? Ei, siitä ei ole näyttöä.</strong> Hänen vastaväitteensä kohdistuvat <em>tavoitteeseen ja dataan</em> — seuraavan tokenin ennustukseen, pelkkään tekstiin, maailmamallin puutteeseen — eivät Transformer-arkkitehtuuriin (ks. alla).</li><li><strong>Miten yksittäiset väitteet ovat kestäneet?</strong> Vaihtelevasti (ks. tulostaulu). Väitteet siitä mitä LLM:t <em>eivät voi tehdä</em> (päättely, suunnittelu) ovat kestäneet huonoiten; väitteet pysyvän muistin puutteesta ja heikosta fysiikan ymmärryksestä parhaiten; keskeinen veto — maailmamallit korvaavat LLM:t — on yhä auki, ensimmäinen testi 2027 alussa.</li></ul>",
+"<strong>Short answer.</strong><ul class=\"plain qa\"><li><strong>Is he an LLM skeptic? Yes — consistently, since at least June 2022.</strong> He doubts that scaling language models, or training on text alone, leads to human-level intelligence, and has said so in interviews, talks and essays through 2026. It is a qualified skepticism, though: he calls LLMs useful and expects them to remain, e.g. as an \"orchestrator\" inside larger systems.</li><li><strong>Is he a Transformer skeptic? No — there is no evidence of that.</strong> His objections target the <em>objective and data</em> — next-token prediction, text-only learning, no world model — not the Transformer architecture (see below).</li><li><strong>How have his specific claims held up?</strong> Mixed (see the scoreboard). Claims about what LLMs <em>cannot do</em> (reasoning, planning) have fared worst; claims about missing persistent memory and weak physical understanding have fared best; the central bet — that world models will replace LLMs — is still open, with a first test in early 2027.</li></ul>");
+const DEFENCE=T(
+"<ul class=\"plain\"><li><strong>\"Puhdas autoregressiivinen LLM\" ≠ nykyjärjestelmä.</strong> Hän voi sanoa, että RL, haku, työkalut ja multimodaalisuus tekevät nykyjärjestelmistä jotain muuta kuin hänen kritisoimansa mallit. Silloin ydinväite (\"LLM-<em>paradigma</em> ei riitä\") siirtyy — ja siitä on vaikea hävitä, koska rajaa ei voi mitata.</li><li><strong>Benchmark ≠ ymmärrys.</strong> Saturoituneet testit, vuotanut data, harness-riippuvuus (ARC-AGI-3: 70 % vs 100 %) ja HLE:n väärät vastaukset (~30 % osassa) heikentävät päätelmiä.</li><li><strong>Hän voi olla oikeassa arkkitehtuurista silti.</strong> Muisti, fysiikka ja datatehokkuus ovat juuri ne alueet joissa LLM:t yhä horjuvat — ja joita maailmamallit lupaavat korjata. Sitä ei ole vielä testattu.</li><li><strong>Moni väite oli aikataulu-, ei kykyväite.</strong> Ne ratkeavat vasta 2027–2031.</li></ul>",
+"<ul class=\"plain\"><li><strong>“Pure autoregressive LLM” ≠ today's systems.</strong> He can say RL, search, tools and multimodality make current systems something other than the models he criticised. Then the core claim (“the LLM <em>paradigm</em> isn't enough”) shifts — and it is hard to lose because the boundary can't be measured.</li><li><strong>Benchmark ≠ understanding.</strong> Saturated tests, leaked data, harness dependence (ARC-AGI-3: 70% vs 100%) and HLE's wrong answers (~30% in a subset) weaken conclusions.</li><li><strong>He can still be right about architecture.</strong> Memory, physics and sample efficiency are exactly where LLMs still falter — and where world models promise to help. That hasn't been tested yet.</li><li><strong>Many claims were timelines, not capability claims.</strong> They resolve only in 2027–2031.</li></ul>");
+const METHOD=T(
+"<strong>Menetelmä ja rajoitukset:</strong> {N} väitettä on poimittu sitaattilistasta ja luokiteltu kirjoittajan arvion mukaan; ne eivät ole kaikki hänen sanomansa asiat. Nykytila perustuu marraskuun 2026 verkkohakuun: kärkibenchmarkit ARC Prizen, Artificial Analysisin ja Stanfordin AI Indexin sivuilta luettuna, loput toissijaisista lähteistä. <em>Malleja, nimiä ja lukuja ei ole itsenäisesti toistettu.</em> Moni tulos on valmistajan omaa raportointia. Tarkista avainluvut linkkien takaa ennen jakamista.",
+"<strong>Method and limits:</strong> the {N} claims were drawn from the quotes list and classified by the author's judgement; they aren't everything he has said. The current state rests on November 2026 web search: top benchmarks read from ARC Prize, Artificial Analysis and the Stanford AI Index; the rest from secondary sources. <em>Models, names and figures were not independently reproduced.</em> Many results are vendors' own reporting. Check key figures at the links before sharing.");
+
+/* ================= APP ================= */
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const $=id=>document.getElementById(id);
+const store={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+let lang=store.get('lecun_lang')||'en', theme=store.get('lecun_theme')||'myself';
+if(!I18N[lang])lang='fi'; if(!['myself','light','dark','paper'].includes(theme))theme='myself';
+let tab=(location.hash||'').replace('#','')||'summary';
+if(!['summary','claims','state','quotes'].includes(tab))tab='summary';
+const openSet=new Set(['sum-topic','sum-open','s-reason']);
+const isOpen=k=>openSet.has(k)?' open':'';
+let yearSel=null,tagSel=null,desc=true,cVerd=null,cTopic=null,qVerdSel=null,modalState=null;
+const L=o=>o[lang];
+const TT=()=>I18N[lang];
+const years=[...new Set(DATA.map(x=>x.d.slice(0,4)))].sort();
+const tags=[...new Set(DATA.flatMap(x=>x.tags))];
+const tagName=t=>lang==='en'?(TAGS[t]||t):t;
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmt(d){const[a,b,c]=d.split('-');return lang==='en'?`${+c} ${MON[+b-1]} ${a}`:`${+c}.${+b}.${a}`}
+function chips(el,vals,cur,set,label){el.innerHTML='';[null,...vals].forEach(v=>{const b=document.createElement('button');b.className='chip'+(cur()===v?' on':'');b.textContent=v?(label?label(v):v):TT().all;b.onclick=()=>{set(v);render()};el.appendChild(b)})}
+const vBadge=v=>`<span class="v v-${v}">${VERD[v][lang]}</span>`;
+const dots=n=>'●'.repeat(n)+'○'.repeat(3-n);
+const confB=c=>`<span class="badge b${c}">${TT()['conf'+c]}</span>`;
+const dq=d=>DATA.find(x=>x.d===d);
+
+function applyStatic(){
+  document.documentElement.lang=lang;
+  document.documentElement.dataset.theme=theme;
+  document.title=lang==='en'?'Is Yann LeCun an LLM and Transformer skeptic? A sourced look (Nov 2026)':'Onko Yann LeCun LLM- ja Transformer-skeptikko? (marraskuu 2026)';
+  document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=String(TT()[e.dataset.i18n]).replace('{N}',CLAIMS.length));
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>{const k=e.dataset.i18nHtml;e.innerHTML=({s_def:L(DEFENCE),s_method:L(METHOD).replace('{N}',CLAIMS.length)})[k]||TT()[k]});
+  $('q').placeholder=TT().ph; $('ctxDate').textContent=TT().ctx_date;
+  document.querySelectorAll('#langSeg button').forEach(b=>b.classList.toggle('on',b.dataset.lang===lang));
+  document.querySelectorAll('#themeSeg button').forEach(b=>b.classList.toggle('on',b.dataset.th===theme));
+  document.querySelectorAll('#tabs button').forEach(b=>{b.classList.toggle('on',b.dataset.tab===tab);b.setAttribute('role','tab');b.setAttribute('aria-selected',b.dataset.tab===tab?'true':'false')});document.getElementById('tabs').setAttribute('role','tablist');document.querySelectorAll('.tab').forEach(t=>t.setAttribute('role','tabpanel'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.id==='tab-'+tab));
+}
+
+function renderQuotes(){
+  chips($('years'),years,()=>yearSel,v=>yearSel=v);
+  chips($('tagbar'),tags,()=>tagSel,v=>tagSel=v,tagName);
+  chips($('qVerd'),Object.keys(VERD),()=>qVerdSel,v=>{qVerdSel=v;track('filter_verdict',{verdict:v||'all'})},k=>VERD[k][lang]);
+  const f=$('from').value,t=$('to').value,q=$('q').value.toLowerCase().trim();
+  let rows=DATA.filter(x=>(!yearSel||x.d.startsWith(yearSel))&&(!tagSel||x.tags.includes(tagSel))&&(!qVerdSel||CLAIMS.some(c=>c.dates.includes(x.d)&&c.verdict===qVerdSel))&&(!f||x.d>=f)&&(!t||x.d<=t)&&(!q||(x.q.join(' ')+x.gist+x.gistE+x.ev+x.evE+x.src).toLowerCase().includes(q)));
+  rows.sort((a,b)=>desc?b.d.localeCompare(a.d):a.d.localeCompare(b.d));
+  $('sort').textContent=desc?TT().newest:TT().oldest;
+  $('count').textContent=TT().count(rows.length,rows.reduce((n,x)=>n+x.q.length,0));
+  $('empty').style.display=rows.length?'none':'block';
+  const en=lang==='en';
+  $('list').innerHTML=rows.map(x=>{const note=en?x.nE:x.n;return `<div class="item"><div class="date">${fmt(x.d)}</div><div class="ev">${esc(en?x.evE:x.ev)}</div><div class="gist">${esc(en?x.gistE:x.gist)}</div>${qBlock(x)}<div class="tags">${x.tags.map(t=>`<span class="tag">${esc(tagName(t))}</span>`).join('')}</div>${lightRow(x)}<div class="src">${TT().src}: <a href="${x.url}" target="_blank" rel="noopener">${esc(x.src)}</a><span class="badge ${x.v==1?'b1':'b2'}">${x.v==1?TT().b1:TT().b2}</span>${note?`<div class="note">${note}</div>`:''}</div></div>`}).join('');
+}
+
+function renderState(){
+  $('stLead').innerHTML=TT().st_lead;
+  $('stateList').innerHTML=STATE.map(s=>`<details class="scard fold" data-k="s-${s.id}"${isOpen('s-'+s.id)}><summary><div><h3>${s.ic} ${L(s.title)}</h3><div class="headline">${L(s.head)}</div></div></summary>${s.rows.map(r=>{const v=typeof r.v==='string'?r.v:L(r.v);return `<div class="metric"><div class="lab">${L(r.l)}</div><div class="val">${v}</div><div class="nt">${L(r.n)}<div class="links">${confB(r.c)} <a href="${r.u}" target="_blank" rel="noopener">${esc(r.s||'link')}</a>${r.u2?` <a href="${r.u2}" target="_blank" rel="noopener">+</a>`:''}</div></div></div>`}).join('')}</details>`).join('')+`<div class="panel note">${L(STATE_GAPS)}</div>`;
+}
+
+function renderClaims(){
+  chips($('cVerd'),Object.keys(VERD),()=>cVerd,v=>cVerd=v,k=>VERD[k][lang]);
+  chips($('cTopic'),Object.keys(TOPICS),()=>cTopic,v=>cTopic=v,k=>TOPICS[k][lang]);
+  const rows=CLAIMS.filter(c=>(!cVerd||c.verdict===cVerd)&&(!cTopic||c.topic===cTopic)).sort((a,b)=>VERD[a.verdict].ord-VERD[b.verdict].ord);
+  $('cCount').textContent=TT().c_count(rows.length);
+  $('claimList').innerHTML=rows.map(c=>{
+    const srcs=c.dates.map(d=>dq(d)).filter(Boolean).map(x=>`<a href="${x.url}" target="_blank" rel="noopener">${fmt(x.d)} · ${esc(x.src)}</a>`).join(' ');
+    const tz=L(c.now).replace(/<[^>]+>/g,'').slice(0,150).replace(/&[a-z#0-9]*$/,'')+'…';
+    return `<div class="item claim c-${c.verdict}" id="${c.id}"><div class="head">${vBadge(c.verdict)}<span class="tag">${L(TOPICS[c.topic])}</span><span class="strength">${TT().c_strength}: ${dots(c.st)}</span></div>
+    <div class="gist">${L(c.claim)}</div><blockquote>“${esc(c.q)}”</blockquote>
+    <div class="links">${TT().c_src}: ${srcs}</div>
+    <details class="fold inl" data-k="c-${c.id}"${isOpen('c-'+c.id)}><summary><div><span class="sl">${TT().c_details}</span><span class="teaser">${tz}</span></div></summary><div class="cols"><div class="col"><h4>${TT().c_now}</h4>${L(c.now)}</div><div class="col"><h4>${TT().c_caveat}</h4>${L(c.cav)}</div></div>
+    <div class="links">${TT().c_ev}: ${c.ev.map(e=>`<a href="${e[1]}" target="_blank" rel="noopener">${esc(e[0])}</a>`).join('')}</div></details></div>`}).join('');
+}
+
+function jump(id){tab='claims';cVerd=null;cTopic=null;location.hash='claims';render();const e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'})}
+
+function renderSummary(){
+  $('sumLead').innerHTML=L(LEAD);
+  const nq=DATA.reduce((n,x)=>n+x.q.length,0);
+  $('stats').innerHTML=[[CLAIMS.length,TT().stat_claims],[DATA.length,TT().stat_sources],[nq,TT().stat_quotes],[OPEN_BETS.length,TT().stat_bets]].map(a=>`<div class="stat"><b>${a[0]}</b><span>${a[1]}</span></div>`).join('');
+  const cnt={};Object.keys(VERD).forEach(k=>cnt[k]=0);CLAIMS.forEach(c=>cnt[c.verdict]++);
+  const tot=CLAIMS.length;
+  $('bar').innerHTML=Object.keys(VERD).filter(k=>cnt[k]).map(k=>`<div class="s-${k}" style="width:${cnt[k]/tot*100}%" title="${VERD[k][lang]}">${cnt[k]}</div>`).join('');
+  $('legend').innerHTML=Object.keys(VERD).map(k=>`<span><span class="k s-${k}" style="background:${({wrong:'#d64545',pess:'#e08a1e',part:'#c9a400',right:'#2f9e6b',open:'#6b7bd6'})[k]}"></span>${VERD[k][lang]} (${cnt[k]})</span>`).join('');
+  const list=(vs,key)=>{const a=CLAIMS.filter(c=>vs.includes(c.verdict)).sort((x,y)=>y.st-x.st).map(c=>`<li><a class="jump" onclick="jump('${c.id}')">${L(c.claim)}</a> ${vBadge(c.verdict)}</li>`);const N=4;return a.slice(0,N).join('')+(a.length>N?`<li class="morefold"><details class="fold inl" data-k="${key}"${isOpen(key)}><summary>${TT().show_n(a.length-N)}</summary><ul class="plain tl">${a.slice(N).join('')}</ul></details></li>`:'')};
+  $('listWrong').innerHTML=list(['wrong','pess'],'more-w');
+  $('listRight').innerHTML=list(['right','part'],'more-r');
+  $('topicTable').innerHTML=`<tr><th>${TT().th_topic}</th><th>${TT().th_verd}</th><th>${TT().th_why}</th></tr>`+Object.keys(TOPIC_SUM).map(k=>`<tr><td>${L(TOPICS[k])}</td><td>${vBadge(TOPIC_SUM[k].v)}</td><td>${L(TOPIC_SUM[k].why)}</td></tr>`).join('');
+  $('openTable').innerHTML=`<tr><th>${TT().th_bet}</th><th>${TT().th_when}</th><th>${TT().th_status}</th></tr>`+OPEN_BETS.map(o=>`<tr><td>${L(o.bet)}</td><td>${L(o.when)}</td><td>${L(o.st)}</td></tr>`).join('');
+}
+
+const track=(n,p)=>{try{if(window.mypa&&window.mypa.send)window.mypa.send(n,p||{})}catch(e){}};
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="http"]');if(a){try{track('outbound_click',{host:new URL(a.href).hostname,tab:tab})}catch(_){}}});
+document.addEventListener('toggle',e=>{const d=e.target;if(d&&d.tagName==='DETAILS'&&d.dataset&&d.dataset.k){if(d.open)openSet.add(d.dataset.k);else openSet.delete(d.dataset.k)}},true);
+function syncDetails(){document.querySelectorAll('details[data-k]').forEach(d=>{const w=openSet.has(d.dataset.k);if(d.open!==w)d.open=w})}
+document.querySelectorAll('[data-fold]').forEach(b=>b.addEventListener('click',()=>{const root=document.getElementById(b.dataset.fold);if(!root)return;root.querySelectorAll('details[data-k]').forEach(d=>{const o=b.dataset.act==='open';d.open=o;if(o)openSet.add(d.dataset.k);else openSet.delete(d.dataset.k)})}));
+const bq=q=>`<blockquote>“${esc(q)}”</blockquote>`;
+function qBlock(x){const a=x.q,k='q-'+x.d;if(a.length<=2)return a.map(bq).join('');return a.slice(0,2).map(bq).join('')+`<details class="fold inl" data-k="${k}"${isOpen(k)}><summary>${TT().more_q(a.length-2)}</summary>${a.slice(2).map(bq).join('')}</details>`}
+const escA=s=>esc(s).replace(/"/g,'&quot;');
+const claimsFor=d=>CLAIMS.filter(c=>c.dates.includes(d));
+function lightRow(x){const cl=claimsFor(x.d);if(!cl.length)return '';return `<div class="lightrow"><span class="lh">${TT().light_h}:</span>${cl.map(c=>`<button type="button" class="v v-${c.verdict}" data-open="${x.d}" data-claim="${c.id}" title="${escA(L(c.claim))}">${VERD[c.verdict][lang]} · ${L(TOPICS[c.topic])}</button>`).join('')}</div>`}
+function modalCard(c){return `<div class="item claim c-${c.verdict}" id="m-${c.id}"><div class="head">${vBadge(c.verdict)}<span class="tag">${L(TOPICS[c.topic])}</span><span class="strength">${TT().c_strength}: ${dots(c.st)}</span></div><div class="gist">${L(c.claim)}</div><blockquote>“${esc(c.q)}”</blockquote><div class="cols"><div class="col"><h4>${TT().c_now}</h4>${L(c.now)}</div><div class="col"><h4>${TT().c_caveat}</h4>${L(c.cav)}</div></div><div class="links">${TT().c_ev}: ${c.ev.map(e=>`<a href="${e[1]}" target="_blank" rel="noopener">${esc(e[0])}</a>`).join('')}</div><div class="links"><a href="#claims" onclick="event.preventDefault();closeModal();jump('${c.id}')">${TT().m_goto} →</a></div></div>`}
+function fillModal(scroll){if(!modalState)return;const x=dq(modalState.d);if(!x)return;const en=lang==='en';
+  $('mTitle').textContent=TT().light_h;$('mSub').textContent=fmt(x.d)+' · '+(en?x.evE:x.ev)+' — '+(en?x.gistE:x.gist);$('mNote').textContent=TT().m_note;$('mClose').setAttribute('aria-label',TT().m_close);
+  $('mBody').innerHTML=claimsFor(x.d).map(modalCard).join('');
+  if(scroll){const e=document.getElementById('m-'+modalState.id);if(e)e.scrollIntoView({block:'nearest'})}}
+function openModal(d,id){track('claim_popup',{claim:id,quote_date:d});modalState={d,id};fillModal(true);$('modalBg').hidden=false;document.body.classList.add('noscroll');$('mClose').focus()}
+function closeModal(){modalState=null;$('modalBg').hidden=true;document.body.classList.remove('noscroll')}
+$('list').addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(b)openModal(b.dataset.open,b.dataset.claim)});
+$('mClose').onclick=closeModal;
+$('modalBg').addEventListener('click',e=>{if(e.target.id==='modalBg')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modalState)closeModal()});
+function render(){
+  applyStatic();
+  renderSummary();renderClaims();renderState();renderQuotes();
+  syncDetails();
+  if(modalState)fillModal(false);
+}
+$('from').oninput=$('to').oninput=$('q').oninput=render;
+$('sort').onclick=()=>{desc=!desc;render()};
+$('reset').onclick=()=>{yearSel=tagSel=qVerdSel=null;$('from').value=$('to').value=$('q').value='';render()};
+document.querySelectorAll('#langSeg button').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;track('lang_change',{lang:lang});store.set('lecun_lang',lang);render()});
+document.querySelectorAll('#themeSeg button').forEach(b=>b.onclick=()=>{theme=b.dataset.th;track('theme_change',{theme:theme});store.set('lecun_theme',theme);render()});
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;track('tab_view',{tab:tab});location.hash=tab;render();window.scrollTo(0,0)});
+window.addEventListener('hashchange',()=>{const h=location.hash.replace('#','');if(['summary','claims','state','quotes'].includes(h)){tab=h;render()}});
+render();
+</script>
+
+<a id="thoughts-author" href="https://longshoreforrest.github.io/myself/" rel="author" style="position:fixed;top:12px;right:16px;z-index:2147483647;font:500 13px/1 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#334155;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(100,116,139,.35);border-radius:999px;padding:7px 13px;text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,.12)">Author: Tapio Pitkäranta</a>
+
+<script>
+window.__MYPA_SITE__ = 'thoughts';
+window.__MYPA_ENDPOINT__ = 'https://mypa.longshoreforrest.workers.dev/collect';
+window.__MYPA_EXTRA__ = { page: 'yann-lecun' };
+</script>
+<script>
+/*!
+ * MyPublicAnalytics beacon — selainpuolen snippet.
+ *
+ * Lähetys:
+ *   - 'pageview' automaattisesti sivun latautuessa
+ *   - Custom-eventit: window.mypa.send('section_view', { section: 'experience' })
+ *
+ * Sivukohtainen perus-extra (valinnainen, aseta ennen latausta):
+ *   window.__MYPA_EXTRA__ = { assignment: '0018' };   // liitetään joka eventtiin
+ *
+ * HUOM: lähetettävä `path` on pathname + search — location.hash EI koskaan
+ * kulje mukana. Salatut sivut (MyAssistant) pitävät purkuavaimen juuri
+ * #-osassa, joten avain ei päädy analytiikkaan.
+ *
+ * Käyttää navigator.sendBeacon() (eloonjäänti sivu-vaihdoksen yli) ja
+ * fetch keepalive:n fallbackia.
+ *
+ * Self-tagging (oman vierailusi erottelu):
+ *   Käy kerran sivulla URL:lla ?_mypa_self=1 → localStorageen tallentuu lippu,
+ *   ja kaikki tulevat eventit lähetetään {self:true}. Pois: ?_mypa_self=0.
+ */
+(function () {
+  if (typeof window === "undefined") return;
+  if (window.mypa && window.mypa.__initialized) return;
+
+  var SITE = window.__MYPA_SITE__ || "unknown";
+  var ENDPOINT = window.__MYPA_ENDPOINT__ || "";
+  var AUTO_EVENT = window.__MYPA_AUTO_EVENT__ || "pageview";
+
+  if (!ENDPOINT) return;
+
+  // Perus-extra, joka liitetään JOKAISEEN tämän sivun eventtiin. Julkaisija
+  // asettaa tämän ennen beaconin latausta, esim. MyAssistantin salattu
+  // raportti: window.__MYPA_EXTRA__ = { assignment: '0018', doc: 0 }.
+  // Näin sivukohtainen identiteetti kulkee mukana ilman että polkuun tai
+  // otsikkoon tarvitsee laittaa mitään sisällöstä kertovaa.
+  var BASE_EXTRA = null;
+  try {
+    var be = window.__MYPA_EXTRA__;
+    if (be && typeof be === "object") BASE_EXTRA = be;
+  } catch (e) {}
+
+  // Self-marker: URL-parametri tai localStorage-lippu.
+  var SELF = false;
+  try {
+    var sp = new URLSearchParams(window.location.search);
+    if (sp.get("_mypa_self") === "1") {
+      try { localStorage.setItem("mypa_self", "1"); } catch (e) {}
+    } else if (sp.get("_mypa_self") === "0") {
+      try { localStorage.removeItem("mypa_self"); } catch (e) {}
+    }
+    try { SELF = localStorage.getItem("mypa_self") === "1"; } catch (e) {}
+  } catch (e) {}
+
+  function utm() {
+    try {
+      var p = new URLSearchParams(window.location.search);
+      return {
+        source: p.get("utm_source") || null,
+        medium: p.get("utm_medium") || null,
+        campaign: p.get("utm_campaign") || null,
+      };
+    } catch (e) {
+      return { source: null, medium: null, campaign: null };
+    }
+  }
+
+  // Käyttäjäidentiteetti (esim. Google Sign-In) jaetusta localStoragesta.
+  // Kirjoitettu muotoon { email, name, sub, idToken, t }. Worker varmentaa
+  // idTokenin RS256/JWKS:llä; user-kenttä on varauloskäynti (varmentamaton).
+  var IDENTITY_KEY = window.__MYPA_IDENTITY_KEY__ || "unitas:identity";
+  function identity() {
+    try {
+      var raw = localStorage.getItem(IDENTITY_KEY);
+      if (!raw) return null;
+      var o = JSON.parse(raw);
+      if (!o || !o.email) return null;
+      return o;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // Korkean entropian UA Client Hints (tarkka laitemalli). Vain Chromium.
+  // navigator.userAgentData.getHighEntropyValues on asynkroninen, joten
+  // populoimme tämän kertaalleen ja liitämme sen kaikkiin lähetettäviin
+  // eventteihin. resolveHighEntropy() kutsuu callbackin joka tapauksessa —
+  // myös silloin kun rajapintaa ei ole tai se hylkää — jottei pageview jää
+  // lähettämättä.
+  var UACH = null;
+  function resolveHighEntropy(cb) {
+    try {
+      var uad = navigator.userAgentData;
+      if (uad && typeof uad.getHighEntropyValues === "function") {
+        uad
+          .getHighEntropyValues([
+            "model",
+            "platformVersion",
+            "architecture",
+            "bitness",
+            "uaFullVersion",
+          ])
+          .then(function (he) {
+            UACH = {
+              model: he.model || null,
+              platform_version: he.platformVersion || null,
+              arch: he.architecture || null,
+              bitness: he.bitness || null,
+              full_version: he.uaFullVersion || null,
+            };
+          })
+          .catch(function () {})
+          .then(function () { cb(); });
+        return;
+      }
+    } catch (e) {}
+    cb();
+  }
+
+  function clientContext() {
+    var ctx = {};
+    try {
+      ctx.screen_w = window.screen && screen.width || null;
+      ctx.screen_h = window.screen && screen.height || null;
+      ctx.viewport_w = window.innerWidth || null;
+      ctx.viewport_h = window.innerHeight || null;
+      ctx.dpr = window.devicePixelRatio || null;
+      ctx.language = (navigator.language || "").slice(0, 16);
+      ctx.languages = Array.isArray(navigator.languages)
+        ? navigator.languages.slice(0, 4).join(",")
+        : null;
+      ctx.color_scheme =
+        (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches)
+          ? "dark" : "light";
+      ctx.tz =
+        (Intl && Intl.DateTimeFormat &&
+         new Intl.DateTimeFormat().resolvedOptions().timeZone) || null;
+      ctx.tz_offset = -new Date().getTimezoneOffset();
+      var c = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      if (c) {
+        ctx.net_type = c.effectiveType || null;
+        ctx.net_downlink = c.downlink || null;
+        ctx.net_rtt = c.rtt || null;
+        ctx.net_save_data = !!c.saveData;
+      }
+      ctx.touch = ("ontouchstart" in window) || (navigator.maxTouchPoints > 0);
+      ctx.hardware_concurrency = navigator.hardwareConcurrency || null;
+      ctx.device_memory = navigator.deviceMemory || null;
+    } catch (e) {}
+    return ctx;
+  }
+
+  function send(event, extra) {
+    try {
+      // Liitä client-konteksti pageview-eventtiin (kerran per session).
+      var ev = event || "pageview";
+      var enriched = Object.assign({}, BASE_EXTRA || {}, extra || {});
+      if (ev === "pageview" || ev === "login_pageview") {
+        Object.assign(enriched, clientContext());
+      }
+      var id = identity();
+      var body = JSON.stringify({
+        site: SITE,
+        path: window.location.pathname + window.location.search,
+        event: ev,
+        referrer: document.referrer || "",
+        utm: utm(),
+        extra: Object.keys(enriched).length ? enriched : null,
+        ch: UACH || undefined,
+        self: SELF || undefined,
+        user: id ? { email: id.email, name: id.name, sub: id.sub } : undefined,
+        idToken: id && id.idToken ? id.idToken : undefined,
+      });
+      if (
+        navigator.sendBeacon &&
+        navigator.sendBeacon(
+          ENDPOINT,
+          new Blob([body], { type: "text/plain;charset=UTF-8" }),
+        )
+      ) {
+        return;
+      }
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "text/plain;charset=UTF-8" },
+        body: body,
+        keepalive: true,
+        mode: "cors",
+        credentials: "omit",
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  function autoSend() {
+    // Odota korkean entropian client hintit ennen ensimmäistä lähetystä, jotta
+    // laitemalli ehtii mukaan. UACH jää talteen myös custom-eventtejä varten.
+    resolveHighEntropy(function () { send(AUTO_EVENT); });
+  }
+
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    autoSend();
+  } else {
+    document.addEventListener("DOMContentLoaded", autoSend);
+  }
+
+  window.mypa = { send: send, __initialized: true, __self: SELF };
+})();
+
+</script>
+</body>
+</html>
