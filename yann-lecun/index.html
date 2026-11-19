@@ -21,7 +21,7 @@
 body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,var(--glow) 0,transparent 60%),var(--bg);color:var(--tx);font:16px/1.55 var(--font)}
 .wrap{max-width:1020px;margin:0 auto;padding:60px 20px 80px}
 .sitebar{position:fixed;top:0;left:0;right:0;height:46px;z-index:40;background:var(--ctl);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 20px;font-size:.85rem;font-weight:600;color:var(--mut);letter-spacing:.02em}
-.item{scroll-margin-top:120px}
+.item{scroll-margin-top:110px}
 @media(max-width:520px){.sitebar span.t{display:none}}
 .topbar{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;margin-bottom:18px}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
@@ -31,13 +31,14 @@ body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,var(--glow) 0,
 .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;border:1px solid var(--line);vertical-align:middle}
 h1{font-size:2.1rem;margin:0 0 6px;letter-spacing:-.02em}
 .sub{color:var(--mut);margin:0 0 18px}
-.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--line);margin-bottom:20px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--line);margin-bottom:20px;position:sticky;top:46px;z-index:6;background:var(--ctl);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+@media(max-width:700px){.tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}.tabs button{white-space:nowrap;flex:none}}
 .tabs button{background:transparent;color:var(--mut);border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 16px;font-size:.98rem;cursor:pointer;font-family:inherit;font-weight:600}
 .tabs button.on{color:var(--acc);border-bottom-color:var(--acc)}
 .tabs button:hover{color:var(--tx)}
 .tab{display:none}.tab.on{display:block}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow)}
-.controls{position:sticky;top:46px;z-index:5;background:var(--ctl);backdrop-filter:blur(8px);padding:12px 0 10px;margin-bottom:10px}
+.controls{position:static;z-index:5;background:transparent;padding:12px 0 10px;margin-bottom:10px}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
 .row label{color:var(--mut);font-size:.82rem;margin-right:4px}
 button.chip{background:var(--card2);color:var(--tx);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.85rem;cursor:pointer;font-family:inherit}
@@ -754,7 +755,7 @@ function renderClaims(){
     <div class="links">${TT().c_ev}: ${c.ev.map(e=>`<a href="${e[1]}" target="_blank" rel="noopener">${esc(e[0])}</a>`).join('')}</div></details></div>`}).join('');
 }
 
-function jump(id){tab='claims';cVerd=null;cTopic=null;location.hash='claims';render();const e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'})}
+function jump(id){tab='claims';cVerd=null;cTopic=null;history.replaceState(null,'','#claims');render();const e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'})}
 
 function renderSummary(){
   $('sumLead').innerHTML=L(LEAD);
@@ -819,6 +820,7 @@ const TRK={
  bottom:TE("<strong>A split decision: strong diagnoses, ceilings set too low.</strong> LeCun has been right about <em>where today's systems are weak</em> — persistent memory, physical and commonsense understanding, data efficiency. He has been wrong about <em>how hard those weaknesses would be to overcome</em>: his claims of structural impossibility (reasoning, planning, error compounding) have fared worst, and models went through limits he treated as walls. His timeline bets — LLMs largely obsolete by roughly 2028–31, a paradigm shift “obvious” by early 2027 — have not been tested yet.","<strong>Tasapeli: vahvat diagnoosit, liian matalat katot.</strong> LeCun on ollut oikeassa siinä, <em>missä nykyjärjestelmät ovat heikkoja</em> — pysyvä muisti, fysiikan ja maalaisjärjen ymmärrys, datatehokkuus. Hän on ollut väärässä siinä, <em>kuinka vaikeaa heikkouksien voittaminen on</em>: rakenteellista mahdottomuutta koskevat väitteet (päättely, suunnittelu, virheiden kasautuminen) ovat kestäneet huonoiten, ja mallit ovat ylittäneet rajoja, joita hän piti seininä. Hänen aikatauluvetonsa — LLM:t käytännössä vanhentuneita noin 2028–31, paradigmamuutos “ilmeinen” 2027 alussa — ovat vielä testaamatta."),
  rate:(res,held,against,open,pct)=>({en:`Of the <strong>${res}</strong> claims that can already be judged, <strong>${held}</strong> held up (fully or partly) and <strong>${against}</strong> did not — a hit rate of about <strong>${pct}%</strong>. A further <strong>${open}</strong> are still open.`,fi:`Niistä <strong>${res}</strong> väitteestä, jotka voidaan jo arvioida, <strong>${held}</strong> kesti (kokonaan tai osin) ja <strong>${against}</strong> ei kestänyt — osumatarkkuus noin <strong>${pct} %</strong>. Lisäksi <strong>${open}</strong> on vielä auki.`}),
  held:TE("Held up","Kestivät"),miss:TE("Did not hold up","Eivät kestäneet"),open:TE("Still open","Vielä auki"),
+ cols_h:TE("Show the claims behind this (held up / did not hold up / still open)","Näytä taustalla olevat väitteet (kestivät / eivät kestäneet / vielä auki)"),
  how_h:TE("How to read this","Näin tämä luetaan"),
  how:TE("The classification is the author's judgement. The claims come from the quotes on this page and are not a random sample of everything LeCun has said, so selection bias is possible. Many “did not hold up” calls rest on benchmark results, some reported by the vendors themselves, and benchmarks are not general intelligence. LeCun might reasonably answer that his claims concerned <em>pure autoregressive LLMs</em>, not today's systems with reinforcement learning, search and tools. Timeline bets cannot be scored until their deadlines pass. Open the other tabs for each claim's evidence and sources.","Luokittelu on kirjoittajan arvio. Väitteet on poimittu tämän sivun sitaateista, eivätkä ne ole satunnaisotos kaikesta, mitä LeCun on sanonut, joten valintaharha on mahdollinen. Moni “ei kestänyt” -arvio perustuu benchmark-tuloksiin, osa valmistajien omiin raportteihin, eivätkä benchmarkit ole yleistä älykkyyttä. LeCun voi perustellusti vastata, että hänen väitteensä koskivat <em>puhtaita autoregressiivisiä LLM:iä</em>, ei nykyjärjestelmiä, joissa on vahvistusoppimista, hakua ja työkaluja. Aikatauluvetoja ei voi pisteyttää ennen kuin määräajat umpeutuvat. Muilta välilehdiltä löytyvät kunkin väitteen perustelut ja lähteet.")};
 function renderTrack(){
@@ -828,7 +830,9 @@ function renderTrack(){
  const bar=Object.keys(VERD).filter(k=>cnt[k]).map(k=>`<div class="s-${k}" style="width:${cnt[k]/CLAIMS.length*100}%" title="${VERD[k][lang]}">${cnt[k]}</div>`).join('');
  const col=(arr,cls,h)=>`<div class="tcol t-${cls}"><h4>${L(h)} (${arr.length})</h4><ul>${arr.slice().sort((a,b)=>b.st-a.st).map(c=>`<li><a class="jump" onclick="jump('${c.id}')">${L(CLAIM_SHORT[c.id]||{en:c.id,fi:c.id,[lang]:c.id})}</a><span class="v v-${c.verdict} sm">${VERD[c.verdict][lang]}</span></li>`).join('')}</ul></div>`;
  const r=TRK.rate(res,held.length,against.length,open.length,pct);
- $('track').innerHTML=`<h3>${L(TRK.h)}</h3><div class="tsub">${L(TRK.sub)}</div><div class="bar">${bar}</div><div class="trate">${r[lang]}</div><div class="tbottom">${L(TRK.bottom)}</div><div class="tcols">${col(held,'held',TRK.held)}${col(against,'miss',TRK.miss)}${col(open,'open',TRK.open)}</div><details class="fold inl" data-k="trk-how"${isOpen('trk-how')}><summary>${L(TRK.how_h)}</summary><div class="note">${L(TRK.how)}</div></details>`;}
+ $('track').innerHTML=`<h3>${L(TRK.h)}</h3><div class="tsub">${L(TRK.sub)}</div><div class="bar">${bar}</div><div class="trate">${r[lang]}</div><div class="tbottom">${L(TRK.bottom)}</div><details class="fold inl" data-k="trk-cols"${isOpen('trk-cols')}><summary>${L(TRK.cols_h)}</summary><div class="tcols">${col(held,'held',TRK.held)}${col(against,'miss',TRK.miss)}${col(open,'open',TRK.open)}</div></details><details class="fold inl" data-k="trk-how"${isOpen('trk-how')}><summary>${L(TRK.how_h)}</summary><div class="note">${L(TRK.how)}</div></details>`;}
+function stickyOffset(){const sb=document.querySelector('.sitebar'),tb=document.getElementById('tabs');return (sb?sb.offsetHeight:0)+(tb?tb.offsetHeight:0)}
+function keepTabsInView(){const panel=document.getElementById('tab-'+tab);if(!panel)return;const target=panel.getBoundingClientRect().top+window.scrollY-stickyOffset()-8;if(window.scrollY>target)window.scrollTo({top:Math.max(0,target),behavior:'instant'})}
 function render(){
   applyStatic();
   renderTrack();renderSummary();renderClaims();renderState();renderQuotes();
@@ -840,7 +844,7 @@ $('sort').onclick=()=>{desc=!desc;render()};
 $('reset').onclick=()=>{yearSel=tagSel=qVerdSel=null;$('from').value=$('to').value=$('q').value='';render()};
 document.querySelectorAll('#langSeg button').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;track('lang_change',{lang:lang});store.set('lecun_lang',lang);render()});
 document.querySelectorAll('#themeSeg button').forEach(b=>b.onclick=()=>{theme=b.dataset.th;track('theme_change',{theme:theme});store.set('lecun_theme',theme);render()});
-document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;track('tab_view',{tab:tab});location.hash=tab;render();window.scrollTo(0,0)});
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;track('tab_view',{tab:tab});history.replaceState(null,'','#'+tab);render();keepTabsInView()});
 window.addEventListener('hashchange',()=>{const h=location.hash.replace('#','');if(['summary','claims','state','quotes'].includes(h)){tab=h;render()}});
 render();
 </script>
